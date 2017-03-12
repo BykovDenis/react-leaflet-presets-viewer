@@ -26,6 +26,10 @@
     "import/parser": "babel-eslint",
     "import/resolve": {
       "moduleDirectory": ["node_modules", "src"]
+    },
+    "ecmaFeatures": {
+      "classes": true,
+      "jsx": true
     }
   },
   "globals": {
