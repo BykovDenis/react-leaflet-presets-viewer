@@ -4,6 +4,8 @@
 require('babel-polyfill');
 // Установка режима работы сборщика
 const NODE_ENV = process.env.NODE_ENV || 'development';
+// Режим очистки старых файлов билда при каждой сборке
+const REFRESH = process.env.REFRESH;
 // webpack.config.js
 const webpack = require('webpack');
 const path = require('path');
@@ -16,6 +18,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');  // для плагина формирования html из шаблонизатора
 // dashbord
 var DashboardPlugin = require('webpack-dashboard/plugin');
+// для плагина по минификации и оптимизации css
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const srcDir = 'src';
 const outputDir = 'build/';
@@ -77,7 +81,7 @@ module.exports = {
   context: __dirname + '/src/',
   entry: {
     bundle: './js',
-    styles: './css'
+    styles: './scss'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -88,7 +92,7 @@ module.exports = {
   // Определение расширений файлов по-умолчанию
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx', '.css', '.html', '.jade']
+    extensions: ['.js', '.jsx', '.scss', '.html', '.jade']
   },
   resolveLoader: {
     modules: ["web_loaders", "web_modules", "node_loaders", "node_modules"],
@@ -122,8 +126,11 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract('css-loader')
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
+      })
     }, {
       test: /\.jade$/,
       loader: "jade-loader",
@@ -136,7 +143,26 @@ module.exports = {
   }
 };
 
-if(NODE_ENV == 'refresh') {
+if(NODE_ENV == 'production') {
+  module.exports.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true,
+        unsafe: true
+      }
+    })
+  );
+  module.exports.plugins.push(
+    new OptimizeCssAssetsPlugin({ // Оптимизация и минификация сгенерированного css кода
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: {removeAll: true } },
+      canPrint: true
+    }));
+}
+
+if(REFRESH == 'refresh') {
   module.exports.plugins.push(
     // Чистить папку с билдом перед каждой сборкой
     new CleanWebpackPlugin(outputDir, {
@@ -145,4 +171,5 @@ if(NODE_ENV == 'refresh') {
       dry: false,
     })
   );
+    
 }
