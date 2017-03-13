@@ -139,7 +139,12 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: ['babel-loader?' + JSON.stringify(babelLoaderQuery), 'eslint-loader']
-    }]
+    },
+      {
+        test: /\.js$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      }]
   }
 };
 

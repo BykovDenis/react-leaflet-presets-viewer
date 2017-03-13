@@ -8,6 +8,7 @@ import windSpeed from '../../api/wind-speed-data';
 // Данные о направлении ветра
 import windDirection from '../../api/wind-direction-data';
 import PrepareWeatherData from '../../mechanics/PrepareWeatherData';
+import FETCH_WEATHER_DATA_SUCCESS from '../constants/page';
 
 const mockAPIdata = {
   fromAPI: {
@@ -73,9 +74,7 @@ let weatherMetadata = {
 function getHTTP() {
   const url = 'http://openweathermap.org/data/2.5/weather?id=524901&units=metric&appid=b1b15e88fa797225412429c1c50c122a1';
   fetch(url)
-    .then((response) => {
-      return response.json();
-    })
+    .then(response => response.json())
     .then((weather) => {
       mockAPIdata.fromAPI = weather;
       const parseData = new PrepareWeatherData();
@@ -85,18 +84,19 @@ function getHTTP() {
 }
 
 const getDataWeather = () => (dispatch) => {
+  console.log('response');
   getHTTP();
   dispatch({
-    type: 'FETCH_WEATHER_DATA_SUCCESS',
+    type: FETCH_WEATHER_DATA_SUCCESS,
     payload: weatherMetadata
   });
   setInterval(() => {
     getHTTP();
     dispatch({
-      type: 'FETCH_WEATHER_DATA_SUCCESS',
+      type: FETCH_WEATHER_DATA_SUCCESS,
       payload: weatherMetadata
     });
-  }, 10000);
+  }, 300);
 };
 
 export default getDataWeather;

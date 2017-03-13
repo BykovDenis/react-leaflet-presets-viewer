@@ -1,6 +1,8 @@
 /**
  * Created by bykovdenis on 12.03.17.
  */
+import FETCH_WEATHER_DATA_SUCCESS from '../constants/page';
+
 // Инициализируем объект пустыми значениями
 const initialState = {
   cityName: 'Moscow',
@@ -20,7 +22,7 @@ const initialState = {
 };
 
 export default function Weather(state = initialState, action) {
-  if (action.type === 'FETCH_WEATHER_DATA_SUCCESS') {
+  if (action.type === FETCH_WEATHER_DATA_SUCCESS) {
     return action.payload;
   }
   return state;
