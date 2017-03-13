@@ -1,11 +1,10 @@
-import CustomDate from '../../libraries/custom-date';
+import CustomDate from '../libs/custom-date';
 
 export default class PrepareWeatherData {
   constructor() {
     this.weather = {};
     this.lang = 'en';
   }
-  
   /**
    * Формирование запроса к серверу для получения данных погоды
    */
@@ -62,6 +61,7 @@ export default class PrepareWeatherData {
         }
       }
     }
+    return;
   }
   /**
    * парсинг данных погоды

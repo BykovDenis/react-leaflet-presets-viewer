@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+// Импорт actions
+import { getDataWeather } from './redux/actions/weather';
 
 class App extends Component {
   static get propTypes() {
@@ -20,6 +22,7 @@ class App extends Component {
 }
 
 export default connect(
-  state => ({ currentStore: state })
+  state => ({ currentStore: state }),
+  dispatch => ({ getWeather: () => { dispatch(getDataWeather()); } })
 )(App);
 
