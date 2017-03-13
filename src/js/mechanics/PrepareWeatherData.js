@@ -46,7 +46,13 @@ export default class PrepareWeatherData {
    * @return {string} Наименование искомого селектора
    */
   getParentSelectorFromObject(object, element, elementName, elementName2) {
-    Object.assign(object).forEach((elem, key) => {
+    if (!object) {
+      return -1;
+    }
+    Object.keys(object).forEach((elem, key) => {
+      if (!elem) {
+        return -1;
+      }
       // Если сравнение производится с объектом из двух элементов ввиде интервала
       if (typeof elem[elementName] === 'object' && !elementName2) {
         if (element >= elem[elementName][0] && element < elem[elementName][1]) {
@@ -58,8 +64,9 @@ export default class PrepareWeatherData {
           return key;
         }
       }
-      return 0;
+      return -1;
     });
+    return -1;
   }
   /**
    * парсинг данных погоды

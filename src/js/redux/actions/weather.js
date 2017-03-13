@@ -96,7 +96,7 @@ const getDataWeather = () => (dispatch) => {
       type: FETCH_WEATHER_DATA_SUCCESS,
       payload: weatherMetadata
     });
-  }, 300);
+  }, 3000);
 };
 
 export default getDataWeather;

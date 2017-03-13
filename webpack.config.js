@@ -79,6 +79,7 @@ reactTransform[1].transforms.push({
 
 module.exports = {
   context: __dirname + '/src/',
+  devtool: 'source-map',
   entry: {
     bundle: './js',
     styles: './scss'
@@ -165,6 +166,14 @@ if(NODE_ENV == 'production') {
       cssProcessorOptions: { discardComments: {removeAll: true } },
       canPrint: true
     }));
+}
+
+if(NODE_ENV == 'development') {
+  module.exports.plugins.push(
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    })
+  );
 }
 
 if(REFRESH == 'refresh') {
