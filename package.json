@@ -1,8 +1,21 @@
 {
   "name": "react_simple",
   "version": "1.0.0",
-  "description": "Настройка сборки react",
+  "description": "Сборка погодных виджетов написанная на react-redux со сборщиком webpack",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BykovDenis/weather-widget-react-custom-build"
+  },
+  "homepage": "https://github.com/BykovDenis/weather-widget-react-custom-build",
+  "keywords": [
+    "react",
+    "redux",
+    "webpack",
+    "babel",
+    "scss",
+    "jade"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "REFRESH=refresh webpack --colors --config webpack.config.js",
@@ -10,7 +23,7 @@
     "prod": "REFRESH=refress NODE_ENV=production webpack --colors --config webpack.config.js",
     "start-prod": "REFRESH=refresh NODE_ENV=production webpack --colors --progress --watch --config webpack.config.js"
   },
-  "author": "",
+  "author": "Bykov Denis",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
