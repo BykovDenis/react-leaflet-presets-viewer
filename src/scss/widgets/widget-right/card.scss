@@ -1,0 +1,14 @@
+.card{
+  font: 600 #{$font-size + 4px} / 1 $font-oswald;
+  color: $color-black;
+
+  &__item{
+    padding: 5px 0 5px 5px;
+  }
+
+  &__item:first-child{
+    border-right: 2px solid $color-pink;
+    padding-right: 5px;
+  }
+
+}

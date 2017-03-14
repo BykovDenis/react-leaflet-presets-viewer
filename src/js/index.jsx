@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // Импорт кастомных компонент
-import App from './app';
+import App from './containers/app';
 import configureStore from './redux/store/configureStore';
 
 const store = configureStore();

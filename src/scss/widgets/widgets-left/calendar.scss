@@ -1,0 +1,30 @@
+.calendar{
+
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: baseline;
+  width: 425px;
+  margin-top: 16px;
+  margin-bottom: 17px;
+  padding:0;
+
+  &__item{
+    font: 600 #{$font-size} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__item:last-child{
+    margin-right: 0;
+  }
+
+  &__item img{
+    display: block;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+  }
+
+}

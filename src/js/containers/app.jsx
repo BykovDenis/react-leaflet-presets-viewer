@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 // Импорт actions
-import getDataWeather from './redux/actions/weather';
+import getDataWeather from '../redux/actions/weather';
 
 class App extends Component {
   static get propTypes() {

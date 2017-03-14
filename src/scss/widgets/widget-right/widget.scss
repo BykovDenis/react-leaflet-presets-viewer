@@ -1,0 +1,62 @@
+.widget {
+
+  width: 300px;
+  border-radius: 6px;
+  margin: 0 auto;
+  box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+
+  &__layout{
+    padding: 27px 0;
+  }
+
+  &__title{
+    font: 600 #{$font-size + 4px} / 1 $font-roboto;
+    margin:0;
+    letter-spacing: 1px;
+  }
+
+  &__header{
+    position: relative;
+    border-radius: 6px 6px 0 0;
+    width: inherit;
+  }
+
+  &__header &__layout {
+    margin-left: 10px;
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  &__footer &__layout{
+    padding: 3px;
+    padding-right: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__footer{
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__date{
+    font: 400 #{$font-size - 4px} / 1 $font-roboto;
+    color: $color-white;
+  }
+
+  &__icon{
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: -15px;
+    z-index: 100;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+}

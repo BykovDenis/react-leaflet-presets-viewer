@@ -1,0 +1,58 @@
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+  background-color: $color-white;
+  border-radius: 6px 6px 0 0;
+
+  &__header{
+    float:left;
+    margin: 0;
+    font: 700 #{$font-size+4px} / $line-height $font-roboto;
+    color: $color-black;
+    word-break: break-word;
+    max-width: 470px;
+  }
+
+  &__layout{
+    @include clearfix;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $color-black;
+    width: 622px;
+  }
+
+  &__links{
+    float: right;
+    position: relative;
+    border-radius: 0 0 6px 6px;
+  }
+
+  &__header span {
+    font: 700 #{$font-size+4px} / $line-height $font-roboto;
+    color: $color-black;
+    padding-right: 3px;
+  }
+
+  &__link{
+    font: 700 $font-size / $line-height $font-roboto;
+    color: $color-black !important;
+    text-decoration: none;
+    opacity: 0.9;
+    border-bottom: none;
+  }
+
+  &__link:before{
+    content:'';
+    width: 14px;
+    height: 14px;
+    background: url($base-url+ 'img/widgets/logo_20x20_black.png') 50% 50% no-repeat;
+    background-size: 14px 14px ;
+    padding-right:17px;
+  }
+
+}

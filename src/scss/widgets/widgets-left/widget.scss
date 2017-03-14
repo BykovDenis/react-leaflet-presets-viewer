@@ -1,0 +1,17 @@
+.widget {
+  border-radius: 6px;
+  margin: 0 5px 5px;
+  background-color: $color-white;
+  width: 680px;
+  box-shadow: 10px -2px 20px 2px rgba(0, 0, 0, 0.3);
+  font: 400 #{$font-size} / 1.3 $font-oswald;
+
+  &__body{
+    @include clearfix;
+    border-radius: 0 0 6px 6px;
+    float:none;
+    margin: 0 auto;
+    width: $width-compact-widget;
+    padding-bottom: 0;
+  }
+}

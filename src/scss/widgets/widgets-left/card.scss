@@ -1,0 +1,68 @@
+.card {
+  float: none;
+  margin: 0 15px;
+
+  &__layout{
+    padding: 0 14px;
+    margin-top: 16px;
+    @include clearfix;
+  }
+
+  &__row1{
+    @include clearfix;
+    position: relative;
+    width: 195px;
+    height: 112px;
+  }
+
+  &__img{
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: -30px;
+  }
+
+  &__col{
+    float: right;
+  }
+
+  &__col span{
+    color: $color-black;
+    padding-top: 16px;
+  }
+
+  &__number{
+    font: 600 #{ $font-size * 3 + 6px} / $line-height $font-oswald;
+    color: $color-black;
+    margin: 0 auto;
+    padding-top:20px;
+  }
+
+  &__degree{
+    font: 700 #{$font-size*3 + 6px} / $line-height $font-oswald;
+    color: $color-black;
+    padding-top: 16px;
+  }
+
+  &__rising{
+    font: 400 #{$font-size} / $line-height $font-roboto;
+  }
+
+  &__means{
+    margin: 0;
+    margin-bottom: 5px;
+    font: 700 #{$font-size + 2px} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__wind{
+    margin: 0;
+    font: 400 #{$font-size - 2px} / $line-height $font-roboto;
+    color: $color-black;
+    text-align: center;
+    padding:2px 0;
+  }
+
+}

@@ -1,0 +1,59 @@
+.weather {
+  position: relative;
+
+  &__temperature{
+    font: 600 #{ $font-size * 5 + 6px} / $line-height $font-oswald;
+    color: $color-black;
+    width: 140px;
+  }
+
+  &__layout{
+    position: relative;
+    padding: 6.5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__table{
+    font: 400 #{$font-size - 2px} / 1 $font-roboto;
+    color: $color-black;
+    text-align: left;
+  }
+
+  &__item{
+    padding: 2px 0;
+  }
+
+  &__item:first-child{
+    padding-right: 19px;
+    min-width: 50px;
+  }
+
+  &__item:last-child{
+    font-weight: 600;
+  }
+
+  &__items:first-child th{
+    border-bottom: 1px solid $color-light-blue5;
+    padding-bottom: 5px;
+  }
+
+  &__items:nth-child(2) &__item{
+    padding-top: 5px;
+  }
+
+  /*  Типизация для второго виджета */
+
+  &__icon {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: -15px;
+    z-index: 100;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+}

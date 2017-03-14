@@ -1,0 +1,75 @@
+/**
+ *  Define scss variables here.
+ *
+ *  Available options for Bootstrap:
+ *  http://getbootstrap.com/customize/
+ *
+ */
+
+// Custom Colors
+$cyan: #33e0ff;
+$humility: #777;
+
+// Bootstrap Variables
+$brand-primary: darken(#428bca, 6.5%);
+$brand-secondary: #e25139;
+$brand-success: #5cb85c;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+$brand-info: #5bc0de;
+
+$text-color: #333;
+
+$font-size-base: 14px;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+
+/* define custom variables */
+
+/* base URL */
+$base-url: 'http://openweathermap.org/themes/openweathermap/assets/vendor/owm/';
+
+$width-normal-widget: 680px;
+$width-compact-widget: 225px;
+
+/* Шрифты */
+
+$font-size: 14px;
+$line-height: 1;
+
+$font-roboto:'Roboto',Arial, sans-serif;
+$font-oswald:'Oswald',Arial, sans-serif;
+
+/* Цвета */
+
+$color-black: #333333;
+$color-white: #ffffff;
+
+$color-gray1: #B9C4C5;
+$color-gray2: #D4DBDC;
+$color-gray3: #E3E7E8;
+
+$color-blue-bg-top: #637395;
+$color-blue-bg-bottom: #637395;
+
+$color-light-blue1: #5FD6D6;
+$color-light-blue2: #A1E6E6;
+$color-light-blue3: #8CE1E1;
+$color-light-blue4: #02FFEA;
+$color-light-blue5: #7ADDDD;
+
+$color-brown-bg-top: #4e4d4a;
+$color-brown-bg-bottom: #353432;
+
+$color-yellow: #F1F029;
+$color-lime: #DDF730;
+
+$color-light-green: #C9F671;
+$color-green: #74E881;
+$color-green1: #00FF00;
+
+$color-light-orange: #FFD05C;
+$color-orange: #FEB020;
+$color-orange1: #ea7e30;
+
+$color-pink: #FF4F98;
+
