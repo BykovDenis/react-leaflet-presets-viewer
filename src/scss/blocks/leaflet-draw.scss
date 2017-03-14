@@ -1,0 +1,33 @@
+.leaflet-draw {
+  position: absolute;
+  bottom: 2px;
+  left: 10px; /* с учетом margin-left: 10px */
+  z-index: 700;
+
+  &-draw-polygon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/polygon.png) 50% 50% no-repeat !important;
+    box-shadow: 0 2px 5px 0 rgba(26, 26, 27, 0.47);
+    background-size: 24px 18px !important;
+    transition: .2s;
+
+    &:hover {
+      background-color: $color-white;
+      font-size: 0;
+    }
+
+    &:active {
+      background-color: $color-blue;
+      font-size: 0;
+    }
+
+    &--close {
+      background: #eef1f3 url(../../../../themes/owm/assets/img/icon-close-black.svg) 50% 50% no-repeat !important;
+      background-size: 20px 20px !important;
+    }
+  }
+
+}

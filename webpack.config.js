@@ -22,7 +22,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const srcDir = 'src';
-const outputDir = 'build/';
+const outputDir = 'themes/owm/assets/'; //'build/';
 
 const assetsPath = path.resolve(__dirname, '../build');
 const host = (process.env.HOST || 'localhost');
@@ -87,8 +87,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
-    filename: 'js/[name].[hash].js',
-    chunkFilename: 'js/[name].[hash].js'
+    filename: outputDir + 'js/[name].[hash].js',
+    chunkFilename: outputDir + 'js/[name].[hash].js'
   },
   // Определение расширений файлов по-умолчанию
   resolve: {
@@ -113,7 +113,7 @@ module.exports = {
     new DashboardPlugin(),
     // Формировать отдельный css файл
     new ExtractTextPlugin({
-      filename: 'css/[name].[hash].css',
+      filename: outputDir + 'css/[name].[hash].css',
       allChunks: true
     }),
     // это функциональность webpack, предназначенная не только для быстрой подгрузки изменений на машине разработчика, но и для обновления сайтов в production
@@ -140,12 +140,19 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: ['babel-loader?' + JSON.stringify(babelLoaderQuery), 'eslint-loader']
-    },
-      {
+    }, {
         test: /\.js$/,
         use: ["source-map-loader"],
         enforce: "pre"
-      }]
+    }, {
+      test: /\.(gif|png|jpe?g|svg)$/i,
+      loaders: [
+        'file-loader?name=' + outputDir + 'img/[name].[ext]'
+      ]
+    }, {
+      test: /\.(woff|woff2|ttf|eot)([\?]?.*)$/i,
+      loader: 'file-loader?name=' + outputDir + 'fonts/[name].[ext]'
+    }]
   }
 };
 
@@ -179,7 +186,7 @@ if(NODE_ENV == 'development') {
 if(REFRESH == 'refresh') {
   module.exports.plugins.push(
     // Чистить папку с билдом перед каждой сборкой
-    new CleanWebpackPlugin(outputDir, {
+    new CleanWebpackPlugin('build/', {
       root: __dirname,
       verbose: true,
       dry: false,

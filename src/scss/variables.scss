@@ -1,75 +1,88 @@
-/**
- *  Define scss variables here.
- *
- *  Available options for Bootstrap:
- *  http://getbootstrap.com/customize/
- *
- */
+/* Определяем цвета */
 
-// Custom Colors
-$cyan: #33e0ff;
-$humility: #777;
-
-// Bootstrap Variables
-$brand-primary: darken(#428bca, 6.5%);
-$brand-secondary: #e25139;
-$brand-success: #5cb85c;
-$brand-warning: #f0ad4e;
-$brand-danger: #d9534f;
-$brand-info: #5bc0de;
-
-$text-color: #333;
-
-$font-size-base: 14px;
-$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
-
-/* define custom variables */
-
-/* base URL */
-$base-url: 'http://openweathermap.org/themes/openweathermap/assets/vendor/owm/';
-
-$width-normal-widget: 680px;
-$width-compact-widget: 225px;
-
-/* Шрифты */
-
-$font-size: 14px;
-$line-height: 1;
-
-$font-roboto:'Roboto',Arial, sans-serif;
-$font-oswald:'Oswald',Arial, sans-serif;
-
-/* Цвета */
-
-$color-black: #333333;
+$color-gray: #d7dadb;
+$color-gray1: #eef1f3;
+$color-gray2: #d7dadb;
+$color-gray3: #515152;
+$color-gray4: #888c8e;
+$color-gray5: #c3c5c7;
+$color-gray6: #e2e5e7;
+$color-gray7: #d6d9db;
+$color-gray8: #555555;
+$color-gray9: #777777;
 $color-white: #ffffff;
+$color-red: #ed3e49;
+$color-blue2: #2babcf;
+$color-black4: #161414;
 
-$color-gray1: #B9C4C5;
-$color-gray2: #D4DBDC;
-$color-gray3: #E3E7E8;
+$color-dark-gray: #1b1e1f;
+$color-light-gray: #eef1f3;
 
-$color-blue-bg-top: #637395;
-$color-blue-bg-bottom: #637395;
+$color-black-pure: #000000;
+$color-black: #303031;
 
-$color-light-blue1: #5FD6D6;
-$color-light-blue2: #A1E6E6;
-$color-light-blue3: #8CE1E1;
-$color-light-blue4: #02FFEA;
-$color-light-blue5: #7ADDDD;
+$color-blue: #42a2e1;
+$color-blue1: #1486d0;
+$color-light-blue: #71c7e7;
 
-$color-brown-bg-top: #4e4d4a;
-$color-brown-bg-bottom: #353432;
+$font-menu: 'Open Sans', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+$font-size-logo: 20px;
+$font-color-logo: $color-gray8;
 
-$color-yellow: #F1F029;
-$color-lime: #DDF730;
+$font-size-nav: 12px;
+$font-color-nav: $color-gray9;
 
-$color-light-green: #C9F671;
-$color-green: #74E881;
-$color-green1: #00FF00;
+/* Определяем цветовые ыильтры для элементов */
 
-$color-light-orange: #FFD05C;
-$color-orange: #FEB020;
-$color-orange1: #ea7e30;
+/* фильтры погодных слоев */
 
-$color-pink: #FF4F98;
+$bgcolor-filter-general: $color-gray1;
+$bgcolor-filter-general-hover: $color-white;
+$bgcolor-filter-general-active: $color-gray2;
+$bgcolor-filter-general-checked: $color-blue;
+$bgcolor-filters-checked: $color-gray1;
+
+$bgcolor-layers-default: $color-gray3;
+$border-color-layers-default: $color-white;
+$border-color-layers-active: $color-gray3;
+
+$bg-color-filter-of-map-interval: $color-gray1;
+$bgcolor-metadata: $color-gray1;
+$bgcolor-filter-of-interval: $color-gray1;
+$bgcolor-filter-of-subinterval: $color-gray6;
+$bgcolor-border-of-interval: $color-gray7;
+
+$border-color-popup-control: $color-gray1;
+
+/* Определение шрифтов */
+
+$font-helveticaneue: 'HelveticaNeue', 'Arial', sans-serif;
+$font-size: 16px;
+
+$font-color-main: $color-black;
+$font-color-inverted: $color-gray1;
+$font-color-mask: $color-white;
+
+$font-color-metadata-units: $color-gray5;
+$font-color-filter-of-subinterval: $color-blue;
+
+/* Текст */
+
+$base-font-size: 14px;
+$base-font-color: $color-black;
+$inverted-font-color: $color-white;
+
+/* Фоны */
+$base-bgcolor: $color-white;
+
+/* страница */
+$page-width: 1200px;
+$layout-width: 1130px;
+$base-border-color: $color-dark-gray;
+$border-color-interactive-number: $color-light-gray;
+$color-link-hover: $color-blue2;
+$bgcolor-main-footer: $color-black4;
+
+
 

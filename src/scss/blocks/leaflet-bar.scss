@@ -1,0 +1,53 @@
+.leaflet-bar {
+
+  border: 0 !important;
+  box-shadow: none;
+
+ & a{
+   font-size: 0;
+ }
+
+ & a:first-child {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/icon-zoomin.svg) 50% 50% no-repeat;
+    box-shadow: 0px 2px 5px 0px rgba(26, 26, 27, 0.47);
+    background-size: 20px 20px;
+  }
+
+  & a:nth-child(2) {
+    border-radius: 50%;
+    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/icon-zoomout.svg) 50% 50% no-repeat;
+    box-shadow: 0px 2px 5px 0px rgba(26, 26, 27, 0.47);
+    background-size: 20px 20px;
+  }
+
+  & a:hover {
+    background-color: $color-white;
+    transition: .2s;
+    font-size: 0;
+  }
+
+  & a:active {
+    background-color: $color-blue;
+    transition: .2s;
+    font-size: 0;
+  }
+
+
+  & a:first-child:active {
+    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/icon-zoomin-white.svg) 50% 50% no-repeat;
+    background-size: 20px 20px;
+    background-color: $color-blue;
+    font-size: 0;
+  }
+
+  & a:nth-child(2):active {
+    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/icon-zoomout-white.svg) 50% 50% no-repeat;
+    background-size: 20px 20px;
+    background-color: $color-blue;
+    font-size: 0;
+  }
+
+}
+

@@ -2,10 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c2727a3-f255-474a-b7e5-cc029ecee53d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/HelveticaNeue-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-black-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-blackitalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bold-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bolditalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavy-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavyitalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-italic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-light-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-lightitalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-medium-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-mediumitaicl-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-roman-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thin-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thinitalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralight-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralightitalic-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/lato-regular-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/oswald-demibold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/roboto-bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/roboto-medium.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/roboto-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-arrow-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-arrow-up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-cross.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-cross@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/img-filter-atmospheric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/img-filter-vegetation-index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/img-filter-water-index.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/layers-combined.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/layers-sattelite.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/layers-vector.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/HelveticaNeue-Bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/HelveticaNeue-Bold.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/HelveticaNeue-Bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-black-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-black-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-black-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-blackitalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-blackitalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-blackitalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bold-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bold-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bold-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bolditalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bolditalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-bolditalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavy-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavy-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavy-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavyitalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavyitalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-heavyitalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-italic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-italic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-italic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-light-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-light-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-light-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-lightitalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-lightitalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-lightitalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-medium-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-medium-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-medium-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-mediumitaicl-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-mediumitaicl-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-mediumitaicl-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-roman-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-roman-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-roman-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thin-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thin-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thin-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thinitalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thinitalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-thinitalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralight-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralight-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralight-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralightitalic-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralightitalic-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/helveticaneuecyr-ultralightitalic-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/lato-black-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fonts/lato-regular-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-arrow-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-arrow-up.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-calendar-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-close-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-close-black2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-close-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-clouds-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-atmospheric-removal-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-atmospheric-removal-black2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-atmospheric-removal-blue.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-general-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-general-black2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-general-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-vegetaion-index-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-vegetaion-index-black2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-vegetaion-index-green.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-vegetaion-index-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-water-index-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-water-index-black2.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-water-index-blue.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-filter-water-index-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-heart-red.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-heart-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-point-position-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-sun-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-zoomin-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-zoomin.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-zoomout-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon-zoomout.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-control-location.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-control-minimap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-control-scale.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-control-zoom.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-draw.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-popup-content-wrapper.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-popup-content.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-popup-tip-container.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-popup.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/blocks/leaflet-top.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/components/animate.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/components/l-control-search.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/components/leaflet-bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/components/leaflet-control-minimap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/scss/components/mosaic.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/app.jsx" afterPath="$PROJECT_DIR$/src/js/containers/app.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/libs/base-map.js" afterPath="$PROJECT_DIR$/src/js/libs/base-map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/redux/reducers/map.js" afterPath="$PROJECT_DIR$/src/js/redux/reducers/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/index.scss" afterPath="$PROJECT_DIR$/src/scss/index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scss/variables.scss" afterPath="$PROJECT_DIR$/src/scss/variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,71 +163,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/js/containers/app.jsx">
+      <file leaf-file-name="fontawesome-webfont.eot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fonts/fontawesome-webfont.eot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-                <marker date="1489504783693" expanded="true" signature="580:586" ph="©" />
-                <marker date="1489504783693" expanded="true" signature="734:800" ph="..." />
-                <marker date="1489504783693" expanded="true" signature="855:971" ph="..." />
-                <marker date="1489504783693" expanded="true" signature="916:958" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parseURL.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/libs/parseURL.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="102" column="75" selection-start-line="102" selection-start-column="75" selection-end-line="102" selection-end-column="75" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/libs/base-map.js">
+      <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scss/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
-              <folding>
-                <element signature="e#43#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="528">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/redux/reducers/map.js">
+      <file leaf-file-name="variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding>
-                <element signature="e#43#94#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="717">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".eslintrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <file leaf-file-name="leaflet-bar.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/blocks/leaflet-bar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".babelrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.babelrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="153" column="49" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -149,7 +276,6 @@
         <option value="$PROJECT_DIR$/travis.yml" />
         <option value="$PROJECT_DIR$/src/js/app.jsx" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/scss/styles.scss" />
         <option value="$PROJECT_DIR$/src/js/api/natural-phenomenon-data.js" />
         <option value="$PROJECT_DIR$/src/js/api/weather-forecast.js" />
@@ -166,7 +292,6 @@
         <option value="$PROJECT_DIR$/src/js/index.jsx" />
         <option value="$PROJECT_DIR$/src/scss/blocks/global-map.scss" />
         <option value="$PROJECT_DIR$/src/jade/index.jade" />
-        <option value="$PROJECT_DIR$/src/scss/index.scss" />
         <option value="$PROJECT_DIR$/src/scss/blocks/leaflet-container.scss" />
         <option value="$PROJECT_DIR$/src/js/redux/constants/page.js" />
         <option value="$PROJECT_DIR$/src/js/redux/combineReducer.js" />
@@ -176,6 +301,9 @@
         <option value="$PROJECT_DIR$/src/js/libs/base-map.js" />
         <option value="$PROJECT_DIR$/src/js/redux/reducers/map.js" />
         <option value="$PROJECT_DIR$/src/js/containers/app.jsx" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/scss/variables.scss" />
+        <option value="$PROJECT_DIR$/src/scss/index.scss" />
       </list>
     </option>
   </component>
@@ -249,22 +377,8 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presets-viewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presets-viewer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,14 +393,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redux" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,15 +410,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redux" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reducers" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,15 +424,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,15 +438,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="owm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="containers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,7 +464,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../owm-mosaic" />
@@ -376,6 +474,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -386,9 +485,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\OpenWeatherMap\react\presets-viewer\src\img" />
+      <recent name="C:\xampp\htdocs\OpenWeatherMap\react\presets-viewer\src\scss\blocks" />
+      <recent name="C:\xampp\htdocs\OpenWeatherMap\react\presets-viewer\src\fonts" />
+      <recent name="C:\xampp\htdocs\OpenWeatherMap\react\presets-viewer\src\scss" />
       <recent name="C:\xampp\htdocs\OpenWeatherMap\react\presets-viewer\src\js\libs" />
-      <recent name="$PROJECT_DIR$/src/scss" />
-      <recent name="$PROJECT_DIR$/src/js/api" />
     </key>
   </component>
   <component name="RunManager">
@@ -460,20 +561,21 @@
       <workItem from="1489347591853" duration="6876000" />
       <workItem from="1489412800576" duration="10091000" />
       <workItem from="1489437119319" duration="5120000" />
-      <workItem from="1489486399303" duration="15111000" />
+      <workItem from="1489486399303" duration="18085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58098000" />
+    <option name="totallyTimeSpent" value="61072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988366" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22527763" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296371" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32862905" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -485,7 +587,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -508,26 +609,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/js/libs/custom-date.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/bundle.e74116a487b4ae9a3f37.js" />
-    <entry file="file://$PROJECT_DIR$/build/js/styles.8211490d27ac8a2ed3b5.js" />
-    <entry file="file://$PROJECT_DIR$/build/css/styles.b232842a4b85906257d9.css" />
-    <entry file="file://$PROJECT_DIR$/build/html/styles.html" />
     <entry file="file://$PROJECT_DIR$/build/js/index.76e07cb0c71cb8bb516f.js" />
     <entry file="file://$PROJECT_DIR$/src/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -566,22 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3850">
-          <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,12 +715,12 @@
         <state relative-caret-position="-349">
           <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding>
-            <marker date="1489498662299" expanded="true" signature="0:2926" ph="{&quot;name&quot;: &quot;react_simple&quot;...}" />
-            <marker date="1489498662299" expanded="true" signature="180:281" ph="{&quot;type&quot;: &quot;git&quot;...}" />
-            <marker date="1489498662299" expanded="true" signature="378:460" ph="[...]" />
-            <marker date="1489498662299" expanded="true" signature="475:937" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
-            <marker date="1489498662299" expanded="true" signature="1007:2056" ph="{&quot;autoprefixer-loader&quot;: &quot;^3.2.0&quot;...}" />
-            <marker date="1489498662299" expanded="true" signature="2076:2924" ph="{&quot;babel-core&quot;: &quot;^6.23.1&quot;...}" />
+            <marker date="1489505107094" expanded="true" signature="0:2965" ph="{&quot;name&quot;: &quot;react_simple&quot;...}" />
+            <marker date="1489505107094" expanded="true" signature="180:281" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1489505107094" expanded="true" signature="378:460" ph="[...]" />
+            <marker date="1489505107094" expanded="true" signature="475:937" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1489505107094" expanded="true" signature="1007:2056" ph="{&quot;autoprefixer-loader&quot;: &quot;^3.2.0&quot;...}" />
+            <marker date="1489505107094" expanded="true" signature="2076:2963" ph="{&quot;babel-core&quot;: &quot;^6.23.1&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -672,14 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -773,7 +830,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
-            <element signature="e#43#94#0" expanded="true" />
+            <element signature="e#43#94#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,7 +840,7 @@
         <state relative-caret-position="419">
           <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
           <folding>
-            <element signature="e#43#82#0" expanded="true" />
+            <element signature="e#43#82#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -798,15 +855,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/containers/app.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="572">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
-            <marker date="1489504783693" expanded="true" signature="580:586" ph="©" />
-            <marker date="1489504783693" expanded="true" signature="734:800" ph="..." />
-            <marker date="1489504783693" expanded="true" signature="855:971" ph="..." />
-            <marker date="1489504783693" expanded="true" signature="916:958" ph="..." />
+            <marker date="1489505930183" expanded="true" signature="593:599" ph="©" />
+            <marker date="1489505930183" expanded="true" signature="747:813" ph="..." />
+            <marker date="1489505930183" expanded="true" signature="868:1050" ph="..." />
+            <marker date="1489505930183" expanded="true" signature="949:1037" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fonts/fontawesome-webfont.eot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="153" column="49" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/font-awesome.min.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="3" column="147" selection-start-line="3" selection-start-column="147" selection-end-line="3" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="5222" column="315" selection-start-line="5222" selection-start-column="315" selection-end-line="5222" selection-end-column="315" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/components/Control.MiniMap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/blocks/leaflet-bar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

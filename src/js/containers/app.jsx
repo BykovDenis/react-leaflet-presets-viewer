@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -22,8 +22,9 @@ class App extends Component {
     );
     return (
       <div className="global-map">
-        <Map center={[this.lat, this.lon]} zoom={this.zoom}>
+        <Map center={[this.lat, this.lon]} zoom={this.zoom} zoomControl={false}>
           {this.urlLayers}
+          <ZoomControl position="topright" />
         </Map>
       </div>
     );
