@@ -17,6 +17,10 @@ class App extends Component {
       <div className="global-map">
         <Map center={[this.lat, this.lon]} zoom={this.zoom}>
           <TileLayer
+            url={`${document.location.protocol}//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`}
+            attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          />
+          <TileLayer
             url={this.url}
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           />
