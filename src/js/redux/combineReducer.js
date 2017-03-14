@@ -3,8 +3,8 @@
  */
 import { combineReducers } from 'redux';
 
-import Weather from './reducers/weather';
+import Map from './reducers/map';
 
 export default combineReducers({
-  Weather
+  Map
 });

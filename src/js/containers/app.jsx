@@ -1,20 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import { connect } from 'react-redux';
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.position = [51.505, -0.09];
+class App extends Component {
+  static get propTypes() {
+    return {
+      currentStore: PropTypes.object.isRequired,
+    };
   }
   render() {
+    console.log('step');
+    [this.lat, this.lon] = [this.props.currentStore.Map.lat, this.props.currentStore.Map.lon];
+    this.zoom = this.props.currentStore.Map.zoom;
+    this.url = this.props.currentStore.Map.baseURL;
     return (
       <div className="global-map">
-        <Map center={this.position} zoom={13}>
+        <Map center={[this.lat, this.lon]} zoom={this.zoom}>
           <TileLayer
-            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+            url={this.url}
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={this.position}>
+          <Marker position={[this.lat, this.lon]}>
             <Popup>
               <span>
                   A pretty CSS3 popup.
@@ -28,3 +34,7 @@ export default class App extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({ currentStore: state })
+)(App);
