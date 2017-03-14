@@ -18,7 +18,7 @@ class App extends Component {
         <Map center={[this.lat, this.lon]} zoom={this.zoom}>
           <TileLayer
             url={this.url}
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           />
           <Marker position={[this.lat, this.lon]}>
             <Popup>

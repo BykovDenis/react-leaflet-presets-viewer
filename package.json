@@ -54,6 +54,7 @@
     "sass-loader": "^6.0.3",
     "source-map-loader": "^0.2.0",
     "style-loader": "^0.13.2",
+    "uri-parse-lib": "^2.0.10",
     "webpack": "^2.2.1",
     "webpack-dashboard": "^0.3.0"
   },
@@ -79,6 +80,7 @@
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
     "redux-devtools-extension": "^2.13.0",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "uri-parse-lib": "^2.0.10"
   }
 }
