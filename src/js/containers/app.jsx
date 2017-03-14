@@ -1,31 +1,30 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-// Импорт actions
-import getDataWeather from '../redux/actions/weather';
+import React, { Component } from 'react';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
-class App extends Component {
-  static get propTypes() {
-    return {
-      currentStore: PropTypes.object.isRequired,
-      getWeather: PropTypes.func.isRequired
-    };
-  }
-  componentDidMount() {
-    this.props.getWeather();
+export default class App extends Component {
+  constructor() {
+    super();
+    this.position = [51.505, -0.09];
   }
   render() {
     return (
-      <div>
-        <h1>Погодные виджеты</h1>
-        {this.props.currentStore.Weather.cityName}
-        <br />
-        <input type="button" value="get weather" />
+      <div className="global-map">
+        <Map center={this.position} zoom={13}>
+          <TileLayer
+            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker position={this.position}>
+            <Popup>
+              <span>
+                  A pretty CSS3 popup.
+                  <br />
+                  Easily customizable.
+              </span>
+            </Popup>
+          </Marker>
+        </Map>
       </div>
     );
   }
 }
-
-export default connect(
-  state => ({ currentStore: state }),
-  dispatch => ({ getWeather: () => { dispatch(getDataWeather()); } })
-)(App);
