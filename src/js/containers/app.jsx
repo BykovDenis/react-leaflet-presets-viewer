@@ -1,38 +1,29 @@
 import React, { Component, PropTypes } from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 import { connect } from 'react-redux';
 
 class App extends Component {
   static get propTypes() {
     return {
-      currentStore: PropTypes.object.isRequired,
+      currentStore: PropTypes.object.isRequired
     };
   }
   render() {
-    console.log('step');
-    [this.lat, this.lon] = [this.props.currentStore.Map.lat, this.props.currentStore.Map.lon];
-    this.zoom = this.props.currentStore.Map.zoom;
-    this.url = this.props.currentStore.Map.baseURL;
+    [this.lat, this.lon] = [
+      parseFloat(this.props.currentStore.Map.lat, 10) || 0,
+      parseFloat(this.props.currentStore.Map.lon, 10) || 0
+    ];
+    this.zoom = parseInt(this.props.currentStore.Map.zoom, 10);
+    this.urls = this.props.currentStore.Map.baseURLs;
+    this.attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+    this.urlLayers = this.urls.map(
+      (elem, index) =>
+        <TileLayer url={elem} attribution={this.attribution} key={index.toString()} />
+    );
     return (
       <div className="global-map">
         <Map center={[this.lat, this.lon]} zoom={this.zoom}>
-          <TileLayer
-            url={`${document.location.protocol}//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`}
-            attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          />
-          <TileLayer
-            url={this.url}
-            attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          />
-          <Marker position={[this.lat, this.lon]}>
-            <Popup>
-              <span>
-                  A pretty CSS3 popup.
-                  <br />
-                  Easily customizable.
-              </span>
-            </Popup>
-          </Marker>
+          {this.urlLayers}
         </Map>
       </div>
     );

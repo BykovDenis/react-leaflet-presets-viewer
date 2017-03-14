@@ -141,7 +141,18 @@ class BaseLayerParams {
       },
     };
 
-    return `${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`;
+    const baseMap = [];
+    baseMap.push(`${document.location.protocol}//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`);
+    if (this.baseLayer === 'vector') {
+      return baseMap;
+    }
+    baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`);
+    if (this.baseLayer === 'satellite') {
+      return baseMap;
+    }
+    baseMap.push(`${document.location.protocol}//{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png`);
+
+    return baseMap;
   }
 
 }

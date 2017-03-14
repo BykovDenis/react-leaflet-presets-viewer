@@ -12,15 +12,11 @@ const params = {
 };
 
 const baseMap = new BaseLayerParams(params);
-const layerURL = baseMap.getBaseMap();
+const baseURLs = baseMap.getBaseMap();
 
-const initialState = {
-  lat: params.lat,
-  lon: params.lon,
-  zoom: params.zoom,
-  baseURL: layerURL,
-};
+params.baseURLs = baseURLs;
 
+const initialState = params;
 export default function Map(state = initialState, action) {
   if (action.type === RENDER_TILE_LAYERS) {
     return action.payload;
