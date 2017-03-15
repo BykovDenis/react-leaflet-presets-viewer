@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Map, MapComponent, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
-import './../libs/L.Control.Search';
+import L from './../libs/L.Control.Search';
 
 class App extends MapComponent {
   static get propTypes() {
@@ -12,8 +12,7 @@ class App extends MapComponent {
   componentDidMount() {
     // Геокодинг
     const leafletMap = this.leafletMap.leafletElement;
-    this.leafletMap.leafletElement.addControl(L.control.search());
-    console.log(leafletMap);
+    leafletMap.addControl(L.control.search());
   }
   render() {
     [this.lat, this.lon] = [

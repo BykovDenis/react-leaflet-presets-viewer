@@ -5,7 +5,7 @@
  * Leaflet Geocoding plugin that look good.
  */
 
-import L from 'leaflet';
+import 'leaflet';
 
 L.Control.Search = L.Control.extend({
   options: {
@@ -116,3 +116,5 @@ L.Control.Search = L.Control.extend({
 L.control.search = function( options ) {
   return new L.Control.Search(options);
 };
+
+export default L;
