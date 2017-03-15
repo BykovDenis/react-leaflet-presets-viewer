@@ -1,6 +1,7 @@
 .leaflet-control-zoom{
 
   & a{
+    box-sizing: border-box;
     width: 40px !important;
     height: 40px !important;
     padding: 8px;

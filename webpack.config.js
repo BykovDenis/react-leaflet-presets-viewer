@@ -22,7 +22,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const srcDir = 'src';
-const outputDir = 'themes/owm/assets/'; //'build/';
+const outputDir = 'build/themes/owm/assets/'; //'build/';
 
 const assetsPath = path.resolve(__dirname, '../build');
 const host = (process.env.HOST || 'localhost');
@@ -85,10 +85,10 @@ module.exports = {
     styles: './scss'
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: outputDir,
     publicPath: '/',
-    filename: outputDir + 'js/[name].[hash].js',
-    chunkFilename: outputDir + 'js/[name].[hash].js'
+    filename: 'js/[name].[hash].js',
+    chunkFilename: 'js/[name].[hash].js'
   },
   // Определение расширений файлов по-умолчанию
   resolve: {
@@ -113,7 +113,7 @@ module.exports = {
     new DashboardPlugin(),
     // Формировать отдельный css файл
     new ExtractTextPlugin({
-      filename: outputDir + 'css/[name].[hash].css',
+      filename: 'css/[name].[hash].css',
       allChunks: true
     }),
     // это функциональность webpack, предназначенная не только для быстрой подгрузки изменений на машине разработчика, но и для обновления сайтов в production
@@ -147,11 +147,11 @@ module.exports = {
     }, {
       test: /\.(gif|png|jpe?g|svg)$/i,
       loaders: [
-        'file-loader?name=' + outputDir + 'img/[name].[ext]'
+        'file-loader?name=img/[name].[ext]'
       ]
     }, {
       test: /\.(woff|woff2|ttf|eot)([\?]?.*)$/i,
-      loader: 'file-loader?name=' + outputDir + 'fonts/[name].[ext]'
+      loader: 'file-loader?name=fonts/[name].[ext]'
     }]
   }
 };

@@ -17,7 +17,7 @@ const baseURLs = baseMap.getBaseMap();
 params.baseURLs = baseURLs;
 
 const initialState = params;
-export default function Map(state = initialState, action) {
+export default function MapReducer(state = initialState, action) {
   if (action.type === RENDER_TILE_LAYERS) {
     return action.payload;
   }

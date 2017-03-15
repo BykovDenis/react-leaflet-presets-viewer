@@ -3,8 +3,8 @@
  */
 import { combineReducers } from 'redux';
 
-import Map from './reducers/map';
+import MapReducer from './reducers/map';
 
 export default combineReducers({
-  Map
+  MapReducer
 });

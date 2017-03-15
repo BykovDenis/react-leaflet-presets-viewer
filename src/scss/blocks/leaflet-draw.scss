@@ -9,7 +9,7 @@
     height: 40px !important;
     border-radius: 50%;
     margin-bottom: 15px;
-    background: $bg-color-filter-of-map-interval url(../../../../themes/owm/assets/img/polygon.png) 50% 50% no-repeat !important;
+    background: $bg-color-filter-of-map-interval url($base-url + 'img/polygon.png') 50% 50% no-repeat !important;
     box-shadow: 0 2px 5px 0 rgba(26, 26, 27, 0.47);
     background-size: 24px 18px !important;
     transition: .2s;
@@ -25,7 +25,7 @@
     }
 
     &--close {
-      background: #eef1f3 url(../../../../themes/owm/assets/img/icon-close-black.svg) 50% 50% no-repeat !important;
+      background: #eef1f3 url($base-url + 'img/icon-close-black.svg') 50% 50% no-repeat !important;
       background-size: 20px 20px !important;
     }
   }
