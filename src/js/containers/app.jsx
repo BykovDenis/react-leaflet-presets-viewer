@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { Map, MapComponent, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
 import L from './../libs/L.Control.Search';
+import NavigationTools from './../components/navigation-tools';
 
 class App extends MapComponent {
   static get propTypes() {
@@ -36,6 +37,7 @@ class App extends MapComponent {
         >
           {this.urlLayers}
           <ZoomControl position="topright" />
+          <NavigationTools />
         </Map>
       </div>
     );
