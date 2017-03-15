@@ -81,7 +81,7 @@ module.exports = {
   context: __dirname + '/src/',
   devtool: 'source-map',
   entry: {
-    bundle: './js',
+    presets_viewer: './js',
     styles: './scss'
   },
   output: {

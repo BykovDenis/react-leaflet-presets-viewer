@@ -16,8 +16,8 @@ class App extends MapComponent {
   }
   render() {
     [this.lat, this.lon] = [
-      parseFloat(this.props.currentStore.MapReducer.lat, 10) || 0,
-      parseFloat(this.props.currentStore.MapReducer.lon, 10) || 0
+      parseFloat(this.props.currentStore.MapReducer.lat, 10),
+      parseFloat(this.props.currentStore.MapReducer.lon, 10)
     ];
     this.zoom = parseInt(this.props.currentStore.MapReducer.zoom, 10);
     this.urls = this.props.currentStore.MapReducer.baseURLs;
