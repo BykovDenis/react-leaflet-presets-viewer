@@ -15,7 +15,7 @@ class App extends MapComponent {
     const leafletMap = this.leafletMap.leafletElement;
     leafletMap.addControl(L.control.search());
   }
-  render() {
+  componentWillMount() {
     [this.lat, this.lon] = [
       parseFloat(this.props.currentStore.MapReducer.lat, 10),
       parseFloat(this.props.currentStore.MapReducer.lon, 10)
@@ -27,6 +27,8 @@ class App extends MapComponent {
       (elem, index) =>
         <TileLayer url={elem} attribution={this.attribution} key={index.toString()} />
     );
+  }
+  render() {
     return (
       <div className="global-map">
         <Map
