@@ -82,7 +82,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     presets_viewer: './js',
-    styles: './scss'
+    presets_viewer_styles: './scss'
   },
   output: {
     path: outputDir,
@@ -127,11 +127,11 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
-      })
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
+        })
     }, {
       test: /\.jade$/,
       loader: "jade-loader",

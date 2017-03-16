@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import { Map, MapComponent, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
 import L from './../libs/L.Control.Search';
-import NavigationTools from './../components/navigation-tools';
+import NavigationTools from '../components/navigation-tools/navigation-tools';
+import PopupCode from '../components/popup-code/popup-code';
 
 class App extends MapComponent {
   static get propTypes() {
@@ -27,10 +28,13 @@ class App extends MapComponent {
       (elem, index) =>
         <TileLayer url={elem} attribution={this.attribution} key={index.toString()} />
     );
+    this.currentURL = this.props.currentStore.MapReducer.baseURLs[1];
   }
   render() {
     return (
       <div className="global-map">
+        <NavigationTools />
+        <PopupCode currentURL={this.currentURL} />
         <Map
           center={[this.lat, this.lon]}
           zoom={this.zoom}
@@ -39,7 +43,6 @@ class App extends MapComponent {
         >
           {this.urlLayers}
           <ZoomControl position="topright" />
-          <NavigationTools />
         </Map>
       </div>
     );

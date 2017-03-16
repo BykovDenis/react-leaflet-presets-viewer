@@ -1,0 +1,43 @@
+@import '../../../scss/variables';
+
+:local(.popup_code) {
+  position: fixed;
+  top: 165px;
+  left: 50%;
+  z-index: 8000;
+  transform-origin: left top;
+  transform: translateX(-50%);
+  width: 640px;
+  height: 200px;
+  background-color: $color-light-gray;
+  border-radius: 5px;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .72));
+}
+
+:local(.popup_code_text) {
+  margin: 5px;
+  width: 98%;
+  height: 109px;
+  box-sizing: border-box;
+}
+
+:local(.button) {
+  background-color: #2babcf;
+  border-color: rgba(0,0,0,0.1);
+  color: white;
+  transition: all .05s linear;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  border-radius: 2px;
+  margin: 0 auto;
+}
