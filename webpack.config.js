@@ -85,7 +85,7 @@ module.exports = {
     presets_viewer_styles: './scss'
   },
   output: {
-    path: outputDir,
+    path: path.join(__dirname, outputDir),
     publicPath: '/',
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[hash].js'
