@@ -1,10 +1,11 @@
 @import '../../../scss/variables';
+@import '../popup-code/popup-code.scss';
 
 :local(.tools) {
   width: auto;
   position: absolute;
   border-radius: 5px;
-  top: 100px;
+  top: 50px;
   left: 30px;
   z-index: 1000;
   background-color: $color-light-gray;
