@@ -1,19 +1,10 @@
 @import '../../../scss/variables';
 
-@keyframes popup-translate {
-  from {
-    top: 0;
-  }
-  to {
-    top: 115px
-  }
-}
-
 :local(.popup_code) {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 0;
+  top: 150px;
   left: 50%;
   z-index: 8000;
   transform-origin: left top;
@@ -22,7 +13,6 @@
   background-color: $color-light-gray;
   border-radius: 5px;
   filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .72));
-  animation: popup-translate .15s forwards;
 }
 
 :local(.popup_code_visible) {

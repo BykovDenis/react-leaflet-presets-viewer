@@ -33,7 +33,7 @@ class App extends MapComponent {
   render() {
     return (
       <div className="global-map">
-        <NavigationTools />
+        <NavigationTools currentURL={this.currentURL} />
         <PopupCode currentURL={this.currentURL} />
         <Map
           center={[this.lat, this.lon]}
