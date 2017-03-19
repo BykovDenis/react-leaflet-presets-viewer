@@ -49,7 +49,7 @@ export default class NavigationTools extends Component {
           <li className={navTools.tools__item}>
             <a
               href="2" className={navTools.tools__link} title="Edit in sql-viewer"
-              onClick={this.popupOpenWindow}
+              onClick={this.openSqlViewer}
             >
               Edit in sql-viewer
             </a>

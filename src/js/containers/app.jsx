@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import L from './../libs/L.Control.Search';
 import NavigationTools from '../components/navigation-tools/navigation-tools';
 import PopupCode from '../components/popup-code/popup-code';
+import getPresetsParams from '../redux/actions/presets';
 
 class App extends MapComponent {
   static get propTypes() {
@@ -14,6 +15,9 @@ class App extends MapComponent {
   constructor(props) {
     super(props);
     this.openPopup = this.openPopup.bind(this);
+    this.closePopup = this.closePopup.bind(this);
+    this.state = { popupVisible: false };
+    this.popupVisible = this.state.popupVisible;
   }
   componentDidMount() {
     // Геокодинг
@@ -35,21 +39,22 @@ class App extends MapComponent {
     this.currentURL = this.props.currentStore.MapReducer.baseURLs[1];
   }
   openPopup() {
-    const popup = document.getElementById('popup_code');
-    if (popup) {
-      if (popup.style.display === 'none') {
-        popup.style.display = 'flex';
-        popup.style.zIndex = '9999';
-      } else {
-        popup.style.display = 'none';
-      }
-    }
+    this.popupVisible = !this.state.popupVisible;
+    this.state = { popupVisible: this.popupVisible };
+    this.props.getPopupOpen();
+  }
+  closePopup() {
+    this.setState({ popupVisible: false });
   }
   render() {
     return (
       <div className="global-map">
         <NavigationTools currentURL={this.currentURL} openPopup={this.openPopup} />
-        <PopupCode currentURL={this.currentURL} />
+        <PopupCode
+          popupVisible={this.state.popupVisible}
+          popupDisable={this.closePopup}
+          currentURL={this.currentURL}
+        />
         <Map
           center={[this.lat, this.lon]}
           zoom={this.zoom}
@@ -65,5 +70,6 @@ class App extends MapComponent {
 }
 
 export default connect(
-  state => ({ currentStore: state })
+  state => ({ currentStore: state }),
+  dispatch => ({ getPopupOpen: () => { dispatch(getPresetsParams()); } })
 )(App);

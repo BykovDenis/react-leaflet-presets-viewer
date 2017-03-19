@@ -7,20 +7,19 @@ import styles from './popup-code.scss';
 export default class PopupCode extends Component {
   static get propTypes() {
     return {
-      currentURL: PropTypes.string.isRequired
+      currentURL: PropTypes.string.isRequired,
+      popupVisible: PropTypes.bool.isRequired,
+      popupDisable: PropTypes.func.isRequired
     };
   }
   constructor(props) {
     super(props);
     this.getCopyCodeInBuffer = this.getCopyCodeInBuffer.bind(this);
     this.popupCloseWindow = this.popupCloseWindow.bind(this);
-  }
-  componentWillMount() {
-    this.popupSyle = {
-      display: 'none'
+    this.popupStyle = {
+      display: 'none',
+      zIndex: 9999
     };
-  }
-  componentWillReceiveProps() {
   }
   getCopyCodeInBuffer() {
     try {
@@ -32,13 +31,17 @@ export default class PopupCode extends Component {
   }
   popupCloseWindow(e) {
     e.preventDefault();
-    this.popup.style.display = 'none';
+    this.props.popupDisable();
   }
   render() {
+    this.popupStyle = {
+      display: this.props.popupVisible || 'none',
+      zIndex: 9999
+    };
     return (
       <div
         id="popup_code" className={styles.popup_code}
-        style={this.popupSyle} ref={(popup) => { this.popup = popup; }}
+        style={this.popupStyle} ref={(popup) => { this.popup = popup; }}
       >
         <a href="1" className={styles.popup_code_close} onClick={this.popupCloseWindow} > X </a>
         <textarea
