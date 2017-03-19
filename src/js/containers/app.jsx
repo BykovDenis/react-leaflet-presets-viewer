@@ -11,6 +11,10 @@ class App extends MapComponent {
       currentStore: PropTypes.object.isRequired
     };
   }
+  constructor(props) {
+    super(props);
+    this.openPopup = this.openPopup.bind(this);
+  }
   componentDidMount() {
     // Геокодинг
     const leafletMap = this.leafletMap.leafletElement;
@@ -30,10 +34,21 @@ class App extends MapComponent {
     );
     this.currentURL = this.props.currentStore.MapReducer.baseURLs[1];
   }
+  openPopup() {
+    const popup = document.getElementById('popup_code');
+    if (popup) {
+      if (popup.style.display === 'none') {
+        popup.style.display = 'flex';
+        popup.style.zIndex = '9999';
+      } else {
+        popup.style.display = 'none';
+      }
+    }
+  }
   render() {
     return (
       <div className="global-map">
-        <NavigationTools currentURL={this.currentURL} />
+        <NavigationTools currentURL={this.currentURL} openPopup={this.openPopup} />
         <PopupCode currentURL={this.currentURL} />
         <Map
           center={[this.lat, this.lon]}

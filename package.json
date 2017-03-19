@@ -18,10 +18,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "REFRESH=refresh webpack-dev-server --colors --config webpack.config.js",
-    "start-dev": "REFRESH=refresh webpack --colors --progress --watch --config webpack.config.js",
-    "prod": "REFRESH=refresh NODE_ENV=production webpack --colors --config webpack.config.js",
-    "start-prod": "REFRESH=refresh NODE_ENV=production webpack --colors --progress --watch --config webpack.config.js"
+    "dev": "REFRESH=refresh webpack-dev-server --colors --watch --config webpack.config.js",
+    "start-dev": "REFRESH=refresh webpack --colors --progress --config webpack.config.js",
+    "prod": "REFRESH=refresh NODE_ENV=production webpack-dev-server --watch --colors --config webpack.config.js",
+    "start-prod": "REFRESH=refresh NODE_ENV=production webpack --colors --progress --config webpack.config.js"
   },
   "author": "Bykov Denis",
   "license": "ISC",
