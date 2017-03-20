@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Map, MapComponent, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import L from './../libs/L.Control.Search';
 import NavigationTools from '../components/navigation-tools/navigation-tools';
 import PopupCode from '../components/popup-code/popup-code';
@@ -9,13 +10,15 @@ import getPresetsParams from '../redux/actions/presets';
 class App extends MapComponent {
   static get propTypes() {
     return {
-      currentStore: PropTypes.object.isRequired
+      currentStore: PropTypes.object.isRequired,
+      getPresetsParams: PropTypes.func.isRequired,
     };
   }
   constructor(props) {
     super(props);
     this.openPopup = this.openPopup.bind(this);
     this.closePopup = this.closePopup.bind(this);
+    this.getLatLon = this.getLatLon.bind(this);
     this.state = { popupVisible: false };
     this.popupVisible = this.state.popupVisible;
   }
@@ -41,10 +44,16 @@ class App extends MapComponent {
   openPopup() {
     this.popupVisible = !this.state.popupVisible;
     this.state = { popupVisible: this.popupVisible };
-    this.props.getPopupOpen();
   }
   closePopup() {
     this.setState({ popupVisible: false });
+  }
+  getLatLon(e) {
+    console.log(e.latlng.lat.toFixed(4), e.latlng.lng.toFixed(4));
+    this.props.getPresetsParams(
+      [e.latlng.lat.toFixed(4), e.latlng.lng.toFixed(4)],
+      e.target.getZoom()
+    );
   }
   render() {
     return (
@@ -60,6 +69,7 @@ class App extends MapComponent {
           zoom={this.zoom}
           zoomControl={false}
           ref={m => (this.leafletMap = m)}
+          onClick={this.getLatLon}
         >
           {this.urlLayers}
           <ZoomControl position="topright" />
@@ -69,7 +79,13 @@ class App extends MapComponent {
   }
 }
 
+function getPresetsParamsProps(dispatch) {
+  return {
+    getPresetsParams: bindActionCreators(getPresetsParams, dispatch)
+  };
+}
+
 export default connect(
   state => ({ currentStore: state }),
-  dispatch => ({ getPopupOpen: () => { dispatch(getPresetsParams()); } })
+  getPresetsParamsProps
 )(App);

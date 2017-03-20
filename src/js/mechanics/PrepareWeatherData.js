@@ -91,7 +91,10 @@ export default class PrepareWeatherData {
       dateReport: date.getTimeDateHHMMMonthDay()
     };
   }
+
 }
+
+
 /**
  * Created by bykovdenis on 12.03.17.
  */

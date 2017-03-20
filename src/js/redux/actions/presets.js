@@ -2,22 +2,27 @@
  * Created by bykovdenis on 19.03.17.
  */
 
-import { RENDER_POPUP_CODE } from '../constants/page';
+import { GET_LOCATION } from '../constants/page';
 
 // Инициализируем объект начальным значением
 const params = {
   lat: 36.04,
   lon: -4.76,
-  zoom: 8,
-  params: 1
+  zoom: 8
 };
-
-const getPresetsParams = () =>
-  (dispatch) => {
-    dispatch({
-      type: RENDER_POPUP_CODE,
-      payload: params
-    });
+/*eslint-disable */
+const getPresetsParams = (latlon, zoom) => {
+  if (!latlon) {
+    return null;
+  }
+  params.lat = latlon[0];
+  params.lon = latlon[1];
+  params.zoom = zoom;
+  return {
+    type: GET_LOCATION,
+    payload: params
   };
+}
 
+/*eslint-disable */
 export default getPresetsParams;

@@ -11,6 +11,8 @@ class BaseLayerParams {
     this.baseLayer = 'satellite';
     this.filterLayer = 'naturalColor';
     this.paramMap = 'lnkTheBest';
+    // Определяем параметры, которые будем анализировать в адресной строке
+    this.uriParams = ['basemap', 'actual', 'layer', 'lat', 'lon', 'zoom'];
     this.url = this.initialMechanicalURI();
     if (this.url) {
       this.setDefaultGetParams();
@@ -23,11 +25,9 @@ class BaseLayerParams {
    * @returns {ParseURL}
    */
   initialMechanicalURI() {
-    // Определяем параметры, которые будем анализировать в адресной строке
-    const uriParams = ['basemap', 'actual', 'layer', 'lat', 'lon', 'zoom'];
     // Определяем текущий слой проверяем адресную строку
     const url = new ParseURL(document.location);
-    url.setUriSearch = uriParams;
+    url.setUriSearch = this.uriParams;
     return url;
   }
 
@@ -155,6 +155,11 @@ class BaseLayerParams {
     return baseMap;
   }
 
+  updateParamsURI(store) {
+    const url = new ParseURL(document.location);
+    url.setUriSearch = this.uriParams;
+    url.setURIParamsNotReloadPage(store);
+  }
 }
 
 export default BaseLayerParams;
