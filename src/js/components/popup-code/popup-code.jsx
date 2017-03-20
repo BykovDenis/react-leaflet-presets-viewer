@@ -46,13 +46,15 @@ export default class PopupCode extends Component {
         <a href="1" className={styles.popup_code_close} onClick={this.popupCloseWindow} > X </a>
         <textarea
           id="popup_code_text" cols="80" rows="9" className={styles.popup_code_text}
-          value={this.props.currentURL} ref={(code) => { this.code = code; }}
+          ref={(code) => { this.code = code; }}
           defaultValue={this.props.currentURL} onChange={this.componentWillReceiveProps}
         />
-        <input
+        <button
           type="button" className={styles.button}
-          onClick={this.getCopyCodeInBuffer} value="Copy in buffer"
-        />
+          onClick={this.getCopyCodeInBuffer}
+        >
+          Copy in buffer
+        </button>
       </div>
     );
   }
