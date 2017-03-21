@@ -40,8 +40,8 @@ class BaseLayerParams {
       layer: this.filterLayer,
       actual: this.paramMap,
       zoom: this.params.zoom,
-      lat: parseFloat(this.params.lat).toFixed(4),
-      lon: parseFloat(this.params.lon).toFixed(4)
+      lat: parseFloat(this.params.lat, 10).toFixed(4),
+      lon: parseFloat(this.params.lon, 10).toFixed(4)
     });
   }
 
@@ -56,9 +56,9 @@ class BaseLayerParams {
     // Zoom
     this.params.zoom = parseInt(url.getData('zoom'), 10) >= 3 && parseInt(url.getData('zoom'), 10) <= 18 ? url.getData('zoom') : this.params.zoom;
     // Широта latitude
-    this.params.lat = parseFloat(url.getData('lat'), 10) ? parseFloat(url.getData('lat'), 10).toFixed(2) : this.params.lat;
+    this.params.lat = parseFloat(url.getData('lat'), 10) ? parseFloat(url.getData('lat'), 10).toFixed(4) : this.params.lat;
     // Широта latitude
-    this.params.lon = parseFloat(url.getData('lon'), 10) ? parseFloat(url.getData('lon'), 10).toFixed(2) : this.params.lon;
+    this.params.lon = parseFloat(url.getData('lon'), 10) ? parseFloat(url.getData('lon'), 10).toFixed(4) : this.params.lon;
     // устанавливаем слой фильтр
     this.filterLayer = url.getData('layer') || this.filterLayer;
     // устанавливаем параметр интервала
