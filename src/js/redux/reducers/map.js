@@ -6,8 +6,8 @@ import BaseLayerParams from '../../libs/base-map';
 
 // Инициализируем объект начальным значением
 const params = {
-  lat: 36.04,
-  lon: -4.76,
+  lat: 36.0454,
+  lon: -4.7654,
   zoom: 8,
 };
 

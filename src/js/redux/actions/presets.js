@@ -6,8 +6,8 @@ import { GET_LOCATION } from '../constants/page';
 
 // Инициализируем объект начальным значением
 const params = {
-  lat: 36.04,
-  lon: -4.76,
+  lat: 36.0432,
+  lon: -4.7612,
   zoom: 8
 };
 /*eslint-disable */
