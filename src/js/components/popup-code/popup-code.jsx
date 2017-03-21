@@ -25,6 +25,7 @@ export default class PopupCode extends Component {
     try {
       this.code.select();
       document.execCommand('copy');
+      this.props.popupDisable();
     } catch (e) {
       console.log(`Ошибка копирования ${e.errLogToConsole}`);
     }
