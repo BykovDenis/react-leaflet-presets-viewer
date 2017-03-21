@@ -17,7 +17,17 @@
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-console": 0,
     "no-alert": 0,
-    "prefer-stateless-function": [0, { "ignorePureComponents": "true" }]
+    "prefer-stateless-function": [0, { "ignorePureComponents": "true" }],
+    "class-methods-use-this": [0, { "exceptMethods": [
+      "componentDidMount",
+      "componentDidUpdate",
+      "componentWillMount",
+      "componentWillReceiveProps",
+      "componentWillUnmount",
+      "componentWillUpdate",
+      "render",
+      "shouldComponentUpdate"
+    ] }]
   },
   "plugins": [
     "react", "import"

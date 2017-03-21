@@ -22,7 +22,7 @@ var DashboardPlugin = require('webpack-dashboard/plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const srcDir = 'src';
-const outputDir = 'build/';
+const outputDir = 'build/themes/owm/assets/'; //'build/';
 
 const assetsPath = path.resolve(__dirname, '../build');
 const host = (process.env.HOST || 'localhost');
@@ -79,12 +79,13 @@ reactTransform[1].transforms.push({
 
 module.exports = {
   context: __dirname + '/src/',
+  devtool: 'source-map',
   entry: {
-    bundle: './js',
-    styles: './scss'
+    presets_viewer: './js',
+    presets_viewer_styles: './scss'
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.join(__dirname, outputDir),
     publicPath: '/',
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[hash].js'
@@ -126,11 +127,11 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
-      })
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
+        })
     }, {
       test: /\.jade$/,
       loader: "jade-loader",
@@ -139,6 +140,18 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: ['babel-loader?' + JSON.stringify(babelLoaderQuery), 'eslint-loader']
+    }, {
+        test: /\.js$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+    }, {
+      test: /\.(gif|png|jpe?g|svg)$/i,
+      loaders: [
+        'file-loader?name=img/[name].[ext]'
+      ]
+    }, {
+      test: /\.(woff|woff2|ttf|eot)([\?]?.*)$/i,
+      loader: 'file-loader?name=fonts/[name].[ext]'
     }]
   }
 };
@@ -162,10 +175,18 @@ if(NODE_ENV == 'production') {
     }));
 }
 
+if(NODE_ENV == 'development') {
+  module.exports.plugins.push(
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    })
+  );
+}
+
 if(REFRESH == 'refresh') {
   module.exports.plugins.push(
     // Чистить папку с билдом перед каждой сборкой
-    new CleanWebpackPlugin(outputDir, {
+    new CleanWebpackPlugin('build/', {
       root: __dirname,
       verbose: true,
       dry: false,

@@ -1,0 +1,89 @@
+/* Определяем цвета */
+
+$color-gray: #d7dadb;
+$color-gray1: #eef1f3;
+$color-gray2: #d7dadb;
+$color-gray3: #515152;
+$color-gray4: #888c8e;
+$color-gray5: #c3c5c7;
+$color-gray6: #e2e5e7;
+$color-gray7: #d6d9db;
+$color-gray8: #555555;
+$color-gray9: #777777;
+$color-white: #ffffff;
+$color-red: #ed3e49;
+$color-blue2: #2babcf;
+$color-black4: #161414;
+
+$color-dark-gray: #1b1e1f;
+$color-light-gray: #eef1f3;
+
+$color-black-pure: #000000;
+$color-black: #303031;
+
+$color-blue: #42a2e1;
+$color-blue1: #1486d0;
+$color-light-blue: #71c7e7;
+
+$font-menu: 'Open Sans', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+$font-size-logo: 20px;
+$font-color-logo: $color-gray8;
+
+$font-size-nav: 12px;
+$font-color-nav: $color-gray9;
+
+/* Определяем цветовые ыильтры для элементов */
+
+/* фильтры погодных слоев */
+
+$bgcolor-filter-general: $color-gray1;
+$bgcolor-filter-general-hover: $color-white;
+$bgcolor-filter-general-active: $color-gray2;
+$bgcolor-filter-general-checked: $color-blue;
+$bgcolor-filters-checked: $color-gray1;
+
+$bgcolor-layers-default: $color-gray3;
+$border-color-layers-default: $color-white;
+$border-color-layers-active: $color-gray3;
+
+$bg-color-filter-of-map-interval: $color-gray1;
+$bgcolor-metadata: $color-gray1;
+$bgcolor-filter-of-interval: $color-gray1;
+$bgcolor-filter-of-subinterval: $color-gray6;
+$bgcolor-border-of-interval: $color-gray7;
+
+$border-color-popup-control: $color-gray1;
+
+/* Определение шрифтов */
+
+$font-helveticaneue: 'HelveticaNeue', 'Arial', sans-serif;
+$font-size: 16px;
+
+$font-color-main: $color-black;
+$font-color-inverted: $color-gray1;
+$font-color-mask: $color-white;
+
+$font-color-metadata-units: $color-gray5;
+$font-color-filter-of-subinterval: $color-blue;
+
+/* Текст */
+
+$base-font-size: 14px;
+$base-font-color: $color-black;
+$inverted-font-color: $color-white;
+
+/* Фоны */
+$base-bgcolor: $color-white;
+
+/* страница */
+$page-width: 1200px;
+$layout-width: 1130px;
+$base-border-color: $color-dark-gray;
+$border-color-interactive-number: $color-light-gray;
+$color-link-hover: $color-blue2;
+$bgcolor-main-footer: $color-black4;
+
+$base-url: './../';
+$base-url-img-submodules: './../../../img/';
+

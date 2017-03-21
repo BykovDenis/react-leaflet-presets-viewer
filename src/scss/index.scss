@@ -1,4 +1,22 @@
-body {
-    color: blue;
-    font-size: 14px;
-}
+@import './normalize';
+@import './variables';
+@import './clearfix';
+
+/* leaflet custom */
+
+@import 'blocks/leaflet-control-zoom';
+@import 'blocks/leaflet-top';
+@import 'blocks/leaflet-bar';
+@import 'blocks/leaflet-popup';
+@import 'blocks/leaflet-popup-content';
+@import 'blocks/leaflet-control-scale';
+@import 'blocks/leaflet-draw';
+@import 'blocks/leaflet-container';
+@import 'blocks/leaflet-popup-content-wrapper';
+@import 'blocks/leaflet-popup-tip-container';
+@import 'blocks/global-map';
+
+@import 'components/mosaic';
+@import 'components/animate';
+@import 'components/leaflet-bar';
+

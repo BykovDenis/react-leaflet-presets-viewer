@@ -1,11 +1,10 @@
-import CustomDate from '../../libraries/custom-date';
+import CustomDate from '../libs/custom-date';
 
 export default class PrepareWeatherData {
   constructor() {
     this.weather = {};
     this.lang = 'en';
   }
-  
   /**
    * Формирование запроса к серверу для получения данных погоды
    */
@@ -47,21 +46,27 @@ export default class PrepareWeatherData {
    * @return {string} Наименование искомого селектора
    */
   getParentSelectorFromObject(object, element, elementName, elementName2) {
-    for (const key in object) {
-      if (object.hasOwnProperty(key)) {
-        // Если сравнение производится с объектом из двух элементов ввиде интервала
-        if (typeof object[key][elementName] === 'object' && !elementName2) {
-          if (element >= object[key][elementName][0] && element < object[key][elementName][1]) {
-            return key;
-          }
-          // сравнение производится со значением элементарного типа с двумя элементами в JSON
-        } else if (elementName2) {
-          if (element >= object[key][elementName] && element < object[key][elementName2]) {
-            return key;
-          }
+    if (!object) {
+      return -1;
+    }
+    Object.keys(object).forEach((elem, key) => {
+      if (!elem) {
+        return -1;
+      }
+      // Если сравнение производится с объектом из двух элементов ввиде интервала
+      if (typeof elem[elementName] === 'object' && !elementName2) {
+        if (element >= elem[elementName][0] && element < elem[elementName][1]) {
+          return key;
+        }
+        // сравнение производится со значением элементарного типа с двумя элементами в JSON
+      } else if (elementName2) {
+        if (element >= elem[elementName] && element < elem[elementName2]) {
+          return key;
         }
       }
-    }
+      return -1;
+    });
+    return -1;
   }
   /**
    * парсинг данных погоды
@@ -86,7 +91,10 @@ export default class PrepareWeatherData {
       dateReport: date.getTimeDateHHMMMonthDay()
     };
   }
+
 }
+
+
 /**
  * Created by bykovdenis on 12.03.17.
  */

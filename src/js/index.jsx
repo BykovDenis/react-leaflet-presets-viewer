@@ -1,18 +1,15 @@
 import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import reducer from './redux/combineReducer';
 // Импорт кастомных компонент
-import App from './app';
+import App from './containers/app';
+import configureStore from './redux/store/configureStore';
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('map')
 );
