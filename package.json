@@ -10,6 +10,7 @@
   "homepage": "https://github.com/BykovDenis/weather-widget-react-custom-build",
   "keywords": [
     "react",
+    "leaflet",
     "redux",
     "webpack",
     "babel",
