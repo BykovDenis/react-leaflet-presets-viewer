@@ -44,6 +44,7 @@ class App extends MapComponent {
   openPopup() {
     this.popupVisible = !this.state.popupVisible;
     this.state = { popupVisible: this.popupVisible };
+    this.forceUpdate();
   }
   closePopup() {
     this.setState({ popupVisible: false });
