@@ -27,7 +27,6 @@ export default class NavigationTools extends Component {
     e.preventDefault();
     this.transition = new TransitionToSqlViewer(this.props.currentURL);
     this.uriParsed = this.transition.getLinkToSqlViewer();
-    console.log(this.uriParsed);
     document.location.href = this.uriParsed;
   }
   popupOpenWindow(e) {

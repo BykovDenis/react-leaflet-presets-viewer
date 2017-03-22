@@ -85,7 +85,7 @@ class BaseLayerParams {
     const dateFrom = processDate.convertDateToNumberDay(ms);
     const dateTo = processDate.convertDateToNumberDay(processDate.formatDate(new Date()));
 
-    const appid = showAppId ? '9de243494c0b295cca9337e1e96b00e2' : '{APPID}';
+    const appid = showAppId ? '9de243494c0b295cca9337e1e96b00e2' : '{APIKEY}';
     const httpProtocol = document.location.protocol;
     const baseURL = `${httpProtocol}//{s}.sat.owm.io/sql/{z}/{x}/{y}?appid=${appid}`;
 
@@ -105,15 +105,13 @@ class BaseLayerParams {
       lnkTheBest: {
         name: 'lnkTheBest',
         description: 'best',
-        param: `&order=best${this.params.where ? `&${this.params.where}` : ''}`,
-        paramTemplate: `&order=best${this.params.where ? `&where=${this.params.where}` : ''}`,
+        param: `&order=best${this.params.where ? `&where=${this.params.where}` : ''}`,
       },
       // Последние за 100 дней
       lnkLast: {
         name: 'lnkLast',
         description: 'last',
-        param: `&order=last${this.params.where ? `&${this.params.where}` : ''}`,
-        paramTemplate: `&order=last${this.params.where ? `&where=${this.params.where}` : ''}`,
+        param: `&order=last${this.params.where ? `&where=${this.params.where}` : ''}`,
       },
       // Последние за 14 дней
       lnkTwoWeeks: {
@@ -133,8 +131,7 @@ class BaseLayerParams {
       lnkTheBestWithParams: {
         name: 'lnkTheBestWithParams',
         description: 'best',
-        param: `&order=best&${this.params.where ? `&${this.params.where}` : ''}&clouds<${1}`,
-        paramTemplate: `&order=best${this.params.where ? `&where=${this.params.where}` : ''}&clouds<${1}`,
+        param: `&order=best&${this.params.where ? `&where=${this.params.where}` : ''}&clouds<${1}`,
       },
       lnkCurrentSummer: {
         name: 'lnkCurrentSummer',
@@ -142,21 +139,16 @@ class BaseLayerParams {
         param: `&order=best&where=${this.params.where ?
           this.params.where :
           (processDate.getCurrentSummerDate()[0] || ''+ ',' + processDate.getCurrentSummerDate()[1] || '')}`,
-        paramTemplate: `&order=best&where=${this.params.where ?
-          this.params.where :
-          (processDate.getCurrentSummerDate()[0] || ''+ ',' + processDate.getCurrentSummerDate()[1] || '')}`,
       },
       lnkCurrentSpring: {
         name: 'lnkCurrentSummer',
         description: 'best',
         param: `&order=best&where=between(${processDate.getCurrentSpringDate()[0]},${processDate.getCurrentSpringDate()[1]})`,
-        paramTemplate: `&order=best&where=between(${processDate.getCurrentSpringDate()[0]},${processDate.getCurrentSpringDate()[1]})`,
       },
       lnkLastSummer: {
         name: 'lnkLastSummer',
         description: 'best',
         param: `&order=best&where=between(${processDate.getLastSummerDate()[0]},${processDate.getLastSummerDate()[1]})`,
-        paramTemplate: `&order=best&where=between(${processDate.getLastSummerDate()[0]},${processDate.getLastSummerDate()[1]})`,
       },
     };
 
@@ -165,11 +157,7 @@ class BaseLayerParams {
     if (this.baseLayer === 'vector') {
       return baseMap;
     }
-    if (showAppId) {
-      baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`);
-    } else {
-      baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].paramTemplate}`);
-    }
+    baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`);
     if (this.baseLayer === 'satellite') {
       return baseMap;
     }

@@ -42,9 +42,9 @@ export default class TransitionToSqlViewer {
     this.parseParamURI();
     let link = `${document.location.protocol}//owm.io/sql-viewer?`;
     Object.keys(this.paramsSqlViewer).forEach((element) => {
-      link += `&${element}=${this.paramsSqlViewer[element]}`;
+      link += `${element}=${this.paramsSqlViewer[element]}&`;
     });
-    return link;
+    return link.substring(0, link.length - 1);
   }
 
 }
