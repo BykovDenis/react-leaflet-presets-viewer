@@ -50,12 +50,12 @@ export default class PopupCode extends Component {
           ref={(code) => { this.code = code; }}
           defaultValue={this.props.currentURL} onChange={this.componentWillReceiveProps}
         />
-        <div>
+        <div className={styles.notice}>
           Important! You need to&nbsp;
             <a href="http://home.owm.io/api_keys" target="_blank">
               get API key
             </a>
-             &nbsp;and replace &APPID= <b>APIKEY</b> with your personal one
+          &nbsp;and replace <b>{ String.fromCharCode(123) + 'APIKEY' + String.fromCharCode(125)} </b> with your personal one
         </div>
         <button
           type="button" className={styles.button}

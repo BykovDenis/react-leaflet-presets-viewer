@@ -39,10 +39,10 @@ export default class NavigationTools extends Component {
         <ul className={navTools.tools__items}>
           <li className={navTools.tools__item}>
             <a
-              href="1" className={navTools.tools__link} title="Get Code"
+              href="1" className={navTools.tools__link} title="Get tile URL"
               onClick={this.popupOpenWindow}
             >
-              Get Code
+              Get tile URL
             </a>
           </li>
           <li className={navTools.tools__item}>

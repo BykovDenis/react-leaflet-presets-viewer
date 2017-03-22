@@ -82,3 +82,8 @@
     outline: none;
   }
 }
+
+:local(.notice) {
+  align-self: flex-start;
+  padding-left: 10px;
+}
