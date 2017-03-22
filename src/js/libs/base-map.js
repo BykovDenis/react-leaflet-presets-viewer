@@ -12,7 +12,7 @@ class BaseLayerParams {
     this.filterLayer = 'naturalColor';
     this.paramMap = 'lnkTheBest';
     // Определяем параметры, которые будем анализировать в адресной строке
-    this.uriParams = ['basemap', 'actual', 'layer', 'lat', 'lon', 'zoom'];
+    this.uriParams = ['basemap', 'actual', 'layer', 'lat', 'lon', 'zoom', 'where'];
     this.url = this.initialMechanicalURI();
     if (this.url) {
       this.setDefaultGetParams();
@@ -35,14 +35,18 @@ class BaseLayerParams {
    * Обновление значение URI параметров URL
    */
   updateURIparams() {
-    this.url.setURIParamsNotReloadPage({
+    const uri = {
       basemap: this.baseLayer,
       layer: this.filterLayer,
       actual: this.paramMap,
       zoom: this.params.zoom,
       lat: parseFloat(this.params.lat, 10).toFixed(4),
-      lon: parseFloat(this.params.lon, 10).toFixed(4)
-    });
+      lon: parseFloat(this.params.lon, 10).toFixed(4),
+    };
+    if (this.params.where) {
+      uri.where = this.params.where;
+    }
+    this.url.setURIParamsNotReloadPage(uri);
   }
 
   /**
@@ -63,6 +67,9 @@ class BaseLayerParams {
     this.filterLayer = url.getData('layer') || this.filterLayer;
     // устанавливаем параметр интервала
     this.paramMap = url.getData('actual') ? url.getData('actual') : this.paramMap;
+    if (url.getData('where')) {
+      this.params.where = url.getData('where');
+    }
   }
 
   /**
@@ -98,46 +105,58 @@ class BaseLayerParams {
       lnkTheBest: {
         name: 'lnkTheBest',
         description: 'best',
-        param: '&order=best',
+        param: `&order=best${this.params.where ? `&${this.params.where}` : ''}`,
+        paramTemplate: `&order=best${this.params.where ? `&where=${this.params.where}` : ''}`,
       },
       // Последние за 100 дней
       lnkLast: {
         name: 'lnkLast',
         description: 'last',
-        param: '&order=last',
+        param: `&order=last${this.params.where ? `&${this.params.where}` : ''}`,
+        paramTemplate: `&order=last${this.params.where ? `&where=${this.params.where}` : ''}`,
       },
       // Последние за 14 дней
       lnkTwoWeeks: {
         name: 'lnkActual14',
         description: 'best,oldest14',
         param: `&order=best&date>${processDate.getDateBeforeDay(14)}`,
+        paramTemplate: `&order=best&date>${processDate.getDateBeforeDay(14)}`,
       },
       // Последние за 100 дней
       lnkActual100: {
         name: 'lnkActual100',
         description: 'best,oldest100',
         param: `&order=best&date>${processDate.getDateBeforeDay(100) || ''}`,
+        paramTemplate: `&order=best&date>${processDate.getDateBeforeDay(100) || ''}`,
       },
       // Параметризованная отрисовка лучших снимков по параметрам даты и облачности
       lnkTheBestWithParams: {
         name: 'lnkTheBestWithParams',
         description: 'best',
-        param: `&order=best&where=between(${dateFrom}:${dateTo})&clouds<${1}`,
+        param: `&order=best&${this.params.where ? `&${this.params.where}` : ''}&clouds<${1}`,
+        paramTemplate: `&order=best${this.params.where ? `&where=${this.params.where}` : ''}&clouds<${1}`,
       },
       lnkCurrentSummer: {
         name: 'lnkCurrentSummer',
         description: 'best',
-        param: `&order=best&where=between(${processDate.getCurrentSummerDate()[0] || ''},${processDate.getCurrentSummerDate()[1] || ''})`,
+        param: `&order=best&where=${this.params.where ?
+          this.params.where :
+          (processDate.getCurrentSummerDate()[0] || ''+ ',' + processDate.getCurrentSummerDate()[1] || '')}`,
+        paramTemplate: `&order=best&where=${this.params.where ?
+          this.params.where :
+          (processDate.getCurrentSummerDate()[0] || ''+ ',' + processDate.getCurrentSummerDate()[1] || '')}`,
       },
       lnkCurrentSpring: {
         name: 'lnkCurrentSummer',
         description: 'best',
         param: `&order=best&where=between(${processDate.getCurrentSpringDate()[0]},${processDate.getCurrentSpringDate()[1]})`,
+        paramTemplate: `&order=best&where=between(${processDate.getCurrentSpringDate()[0]},${processDate.getCurrentSpringDate()[1]})`,
       },
       lnkLastSummer: {
         name: 'lnkLastSummer',
         description: 'best',
         param: `&order=best&where=between(${processDate.getLastSummerDate()[0]},${processDate.getLastSummerDate()[1]})`,
+        paramTemplate: `&order=best&where=between(${processDate.getLastSummerDate()[0]},${processDate.getLastSummerDate()[1]})`,
       },
     };
 
@@ -146,7 +165,11 @@ class BaseLayerParams {
     if (this.baseLayer === 'vector') {
       return baseMap;
     }
-    baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`);
+    if (showAppId) {
+      baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].param}`);
+    } else {
+      baseMap.push(`${this.tileURL[this.filterLayer]}${this.tileParam[this.paramMap].paramTemplate}`);
+    }
     if (this.baseLayer === 'satellite') {
       return baseMap;
     }

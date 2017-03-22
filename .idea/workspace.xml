@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2727a3-f255-474a-b7e5-cc029ecee53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="$PROJECT_DIR$/.eslintrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/containers/app.jsx" afterPath="$PROJECT_DIR$/src/js/containers/app.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/libs/base-map.js" afterPath="$PROJECT_DIR$/src/js/libs/base-map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/redux/reducers/map.js" afterPath="$PROJECT_DIR$/src/js/redux/reducers/map.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/containers/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="748">
               <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
               <folding>
                 <marker date="1490180268105" expanded="true" signature="1395:1401" ph="©" />
@@ -43,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-map.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base-map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/libs/base-map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
+            <state relative-caret-position="195">
+              <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -171,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/js/libs/transition-to-sql-viewer.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/src/js/redux/reducers/map.js" />
-        <option value="$PROJECT_DIR$/src/js/libs/base-map.js" />
         <option value="$PROJECT_DIR$/src/js/containers/app.jsx" />
+        <option value="$PROJECT_DIR$/src/js/libs/base-map.js" />
       </list>
     </option>
   </component>
@@ -573,12 +569,12 @@
       <workItem from="1490085609980" duration="1698000" />
       <workItem from="1490093236284" duration="97000" />
       <workItem from="1490159208675" duration="1167000" />
-      <workItem from="1490177618130" duration="2652000" />
+      <workItem from="1490177618130" duration="5843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129294000" />
+    <option name="totallyTimeSpent" value="132485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -915,21 +911,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/libs/base-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/containers/app.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="748">
           <caret line="41" column="72" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
           <folding>
             <marker date="1490180268105" expanded="true" signature="1395:1401" ph="©" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/libs/base-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="154" column="22" selection-start-line="154" selection-start-column="22" selection-end-line="154" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
