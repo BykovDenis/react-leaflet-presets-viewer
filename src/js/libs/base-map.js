@@ -69,7 +69,7 @@ class BaseLayerParams {
    * Инициализация слоя карты начальными значениями
    * @returns {*}
    */
-  getBaseMap() {
+  getBaseMap(showAppId=true) {
     const processDate = new CustomDate();
     if (!processDate) {
       return false;
@@ -78,19 +78,19 @@ class BaseLayerParams {
     const dateFrom = processDate.convertDateToNumberDay(ms);
     const dateTo = processDate.convertDateToNumberDay(processDate.formatDate(new Date()));
 
-    const appid = '9de243494c0b295cca9337e1e96b00e2';
+    const appid = showAppId ? '9de243494c0b295cca9337e1e96b00e2' : '{APPID}';
     const httpProtocol = document.location.protocol;
     const baseURL = `${httpProtocol}//{s}.sat.owm.io/sql/{z}/{x}/{y}?appid=${appid}`;
 
     /* Базовые URL-ы тайлов */
     this.tileURL = {
-      naturalColor: `${baseURL}&select=b4,b3,b2&color=log(1.2)&brightness%3E6000,brightness%3C4000`,  // Natural Color    4 3 2
-      clear: `${baseURL}&select=b4,b3,b2&color=log(1.2)&brightness%3E6000,brightness%3C4000`,  // Natural Color    4 3 2
+      naturalColor: `${baseURL}&select=b4,b3,b2&from=s2&color=log(1.2)`,  // Natural Color    4 3 2
+      clear: `${baseURL}&select=b4,b3,b2&from=s2&color=log(1.2)`,  // Natural Color    4 3 2
       labelsMap: `${httpProtocol}//{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png`, // cлой маркеров
       ndvi: `${baseURL}&select=b8,b4&from=s2&op=ndvi`,
       ndwi: `${baseURL}&select=b2,b12&from=s2&color=1%3A0b0badff%3B0.5%3A8383d3ff%3B0%3Af4f4f8ff%3B-0.3%3Adfc8aaff%3B-1%3Abd9d72ff&op=ndvi`,
-      l753: `${baseURL}&select=b7,b5,b3&color=log(1.2)&brightness>6000,brightness<4000`, // Natural With Atmospheric Removal    7 5 3 (false color)
-      l543: `${baseURL}&select=b8,b3,b2&from=s2&color=log(1.2)&brightness%3E6000,brightness%3C4000`,  // Color Infrared (vegetation)    5 4 3
+      l753: `${baseURL}&select=b7,b5,b3&from=s2&color=log(1.2)`, // Natural With Atmospheric Removal    7 5 3 (false color)
+      l543: `${baseURL}&select=b8,b3,b2&from=s2&color=log(1.2)`,  // Color Infrared (vegetation)    5 4 3
     };
 
     this.tileParam = {
