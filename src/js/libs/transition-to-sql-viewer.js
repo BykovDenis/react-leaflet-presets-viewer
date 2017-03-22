@@ -13,9 +13,14 @@ export default class TransitionToSqlViewer {
   parseParamURI() {
     const objParams = {};
     this.uri.forEach((element) => {
-      const arr = element.split('=');
-      if (arr.length > 1) {
-        objParams[arr[0]] = arr[1];
+      // обработка параметров с равенством
+      const arr = element.split(/(>|=|<|>=|<=)+/);
+      if (arr.length > 2) {
+        if (arr[0] !== 'date' && arr[0] !== 'clouds') {
+          objParams[arr[0]] = arr[2];
+        } else {
+          objParams.where = arr[0] + arr[1] + arr[2];
+        }
       }
     });
     console.dir(objParams);
