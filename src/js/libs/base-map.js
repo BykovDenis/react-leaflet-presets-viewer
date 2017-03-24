@@ -76,14 +76,11 @@ class BaseLayerParams {
    * Инициализация слоя карты начальными значениями
    * @returns {*}
    */
-  getBaseMap(showAppId=true) {
+  getBaseMap(showAppId = true) {
     const processDate = new CustomDate();
     if (!processDate) {
       return false;
     }
-    const ms = processDate.formatDate(new Date(new Date() - (15 * 1000 * 60 * 60 * 24)));
-    const dateFrom = processDate.convertDateToNumberDay(ms);
-    const dateTo = processDate.convertDateToNumberDay(processDate.formatDate(new Date()));
 
     const appid = showAppId ? '9de243494c0b295cca9337e1e96b00e2' : '{APIKEY}';
     const httpProtocol = document.location.protocol;
@@ -138,7 +135,7 @@ class BaseLayerParams {
         description: 'best',
         param: `&order=best&where=${this.params.where ?
           this.params.where :
-          (processDate.getCurrentSummerDate()[0] || ''+ ',' + processDate.getCurrentSummerDate()[1] || '')}`,
+          `${processDate.getCurrentSummerDate()[0]},${processDate.getCurrentSummerDate()[1]}`}`,
       },
       lnkCurrentSpring: {
         name: 'lnkCurrentSummer',

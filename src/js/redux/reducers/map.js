@@ -12,7 +12,6 @@ const params = {
 };
 
 const baseMap = new BaseLayerParams(params);
-const baseURLs =
 params.baseURLs = baseMap.getBaseMap();
 params.baseURLTemplates = baseMap.getBaseMap(0);
 
