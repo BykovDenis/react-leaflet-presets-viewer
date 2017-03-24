@@ -147,11 +147,11 @@ module.exports = {
     }, {
       test: /\.(gif|png|jpe?g|svg)$/i,
       loaders: [
-        'file-loader?name=img/[name].[ext]'
+        'file-loader?name=themes/owm/assets/img/[name].[ext]'
       ]
     }, {
       test: /\.(woff|woff2|ttf|eot)([\?]?.*)$/i,
-      loader: 'file-loader?name=fonts/[name].[ext]'
+      loader: 'file-loader?name=themes/owm/assets/fonts/[name].[ext]'
     }]
   }
 };
