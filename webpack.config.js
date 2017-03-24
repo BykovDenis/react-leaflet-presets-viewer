@@ -127,10 +127,19 @@ module.exports = {
   ],
   module: {
     rules: [{
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader'
+      })
+    },  {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!autoprefixer-loader?browsers=last 15 versions!sass-loader?sourceMap'
+          use: [
+            'css-loader?modules&importLoaders=2&localIdentName=[local]',
+            'postcss-loader',
+            'sass-loader'
+          ]
         })
     }, {
       test: /\.jade$/,
