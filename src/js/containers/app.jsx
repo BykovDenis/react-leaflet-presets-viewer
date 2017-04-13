@@ -39,7 +39,7 @@ class App extends MapComponent {
       (elem, index) =>
         <TileLayer url={elem} attribution={this.attribution} key={index.toString()} />
     );
-    this.currentURL = this.props.currentStore.MapReducer.baseURLs[1];
+    this.currentURL = this.props.currentStore.MapReducer.baseURLTemplates[1];
   }
   openPopup() {
     this.popupVisible = !this.state.popupVisible;

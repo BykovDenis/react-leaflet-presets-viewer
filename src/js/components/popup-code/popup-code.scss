@@ -1,6 +1,6 @@
 @import '../../../scss/variables';
 
-:local(.popup_code) {
+.popup_code {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,11 +16,11 @@
   filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .72));
 }
 
-:local(.popup_code_visible) {
+.popup_code_visible {
   display: flex;
 }
 
-:local(.popup_code_close) {
+.popup_code_close {
   align-self: flex-end;
   margin: 5px 9px;
   width: 16px;
@@ -37,8 +37,7 @@
 
 }
 
-
-:local(.popup_code_text) {
+.popup_code_text {
   margin: 5px;
   width: 98%;
   height: 109px;
@@ -48,7 +47,7 @@
   font: 400 #{$font-size + 1px} / 1.4 $font-opensans;
 }
 
-:local(.button) {
+.button {
   background-color: #2babcf;
   border-color: rgba(0, 0, 0, 0.1);
   color: white;
@@ -81,4 +80,9 @@
     box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.125);
     outline: none;
   }
+}
+
+.notice {
+  align-self: flex-start;
+  padding-left: 10px;
 }

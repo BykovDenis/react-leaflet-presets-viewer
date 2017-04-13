@@ -1,7 +1,7 @@
 @import '../../../scss/variables';
 @import '../popup-code/popup-code.scss';
 
-:local(.tools_popup) {
+.tools_popup {
   position: absolute;
   z-index: 5000;
   width: auto;
@@ -12,7 +12,7 @@
   filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .72));
 }
 
-:local(.tools__items) {
+.tools__items {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -24,7 +24,7 @@
   margin-bottom: 10px;
 }
 
-:local(.tools__link) {
+.tools__link {
   display: block;
   text-decoration: none;
   font: 400 #{$font-size + 4px} / 1.3 $font-helveticaneue;
@@ -54,32 +54,42 @@
 
 }
 
-:local(.tools__item:first-of-type > .tools__link:before) {
-  content: '';
-  background: url($base-url-img-submodules + 'img-bracket-black.svg') 5px 0 no-repeat;
-  background-size: 27px 27px;
-  width: 35px;
-  height: 27px;
-  z-index: 9999;
-  display: inline-block;
-  padding-right: 10px;
-  float: left;
+.tools__item:first-of-type > .tools__link {
+  color: $color-black;
+  background-color: $color-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &:before {
+    content: '';
+    background: url($base-url-img-submodules + 'img-bracket-black.svg') 5px 0  no-repeat;
+    background-size: 27px 27px;
+    width: 35px;
+    height: 27px;
+    z-index: 9999;
+    display: inline-block;
+    padding-right: 10px;
+    float: left;
+  }
+
+  &:hover:before {
+    content: '';
+    background: url($base-url-img-submodules + 'img-bracket-white.svg') 5px 0  no-repeat;
+    background-size: 27px 27px;
+    width: 35px;
+    height: 27px;
+    z-index: 9999;
+    display: inline-block;
+    padding-right: 10px;
+    float: left;
+  }
+
 }
 
-:local(.tools__item:first-of-type > .tools__link:hover:before) {
-  content: '';
-  background: url($base-url-img-submodules + 'img-bracket-white.svg') 5px 0  no-repeat;
-  background-size: 27px 27px;
-  width: 35px;
-  height: 27px;
-  z-index: 9999;
-  display: inline-block;
-  padding-right: 10px;
-  float: left;
-}
-
-
-:local(.tools__item:nth-of-type(2) > .tools__link:before) {
+.tools__item:nth-of-type(2) > .tools__link:before {
   content: '';
   background: url($base-url-img-submodules + 'tools_icon_LP_black.png') 50% 50% no-repeat;
   background-size: 27px 27px;
@@ -91,7 +101,7 @@
   float: left;
 }
 
-:local(.tools__item:nth-of-type(2) > .tools__link:hover:before) {
+.tools__item:nth-of-type(2) > .tools__link:hover:before {
   content: '';
   background: url($base-url-img-submodules + 'tools_icon_LP_white.png') 50% 50% no-repeat;
   background-size: 27px 27px;

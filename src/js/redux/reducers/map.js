@@ -12,9 +12,8 @@ const params = {
 };
 
 const baseMap = new BaseLayerParams(params);
-const baseURLs = baseMap.getBaseMap();
-
-params.baseURLs = baseURLs;
+params.baseURLs = baseMap.getBaseMap();
+params.baseURLTemplates = baseMap.getBaseMap(0);
 
 const initialState = params;
 export default function MapReducer(state = initialState, action) {
