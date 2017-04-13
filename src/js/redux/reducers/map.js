@@ -7,8 +7,8 @@ import initialState from '../data/initialState';
 
 const paramsMap = initialState.params;
 const baseMap = new BaseLayerParams(paramsMap);
-paramsMap.baseURLs = baseMap.getBaseMap();
-paramsMap.baseURLTemplates = baseMap.getBaseMap(0);
+paramsMap.baseURLs = baseMap.getBaseMap(1, initialState.presets);
+paramsMap.baseURLTemplates = baseMap.getBaseMap(0, initialState.presets);
 
 export default function MapReducer(state = initialState, action) {
   if (action.type === RENDER_TILE_LAYERS) {

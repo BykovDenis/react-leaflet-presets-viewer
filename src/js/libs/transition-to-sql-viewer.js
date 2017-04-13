@@ -16,10 +16,10 @@ export default class TransitionToSqlViewer {
       // обработка параметров с равенством
       const arr = element.split(/(>|=|<|>=|<=)+/);
       if (arr.length > 2) {
-        if (arr[0] !== 'date' && arr[0] !== 'clouds') {
+        if (arr[2] !== 'day' && arr[2] !== 'clouds') {
           objParams[arr[0]] = arr[2];
         } else {
-          objParams.where = arr[0] + arr[1] + arr[2];
+          objParams.where = arr.slice(2).join('');
         }
       }
     });
