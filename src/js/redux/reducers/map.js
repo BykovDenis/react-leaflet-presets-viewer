@@ -1,29 +1,27 @@
 /**
  * Created by Denis on 14.03.2017.
  */
-import { RENDER_TILE_LAYERS, GET_LOCATION } from '../constants/page';
+import { RENDER_TILE_LAYERS, GET_LOCATION, GET_PRESETS_DATA } from '../constants/page';
 import BaseLayerParams from '../../libs/base-map';
+import initialState from '../data/initialState';
 
-// Инициализируем объект начальным значением
-const params = {
-  lat: 36.0454,
-  lon: -4.7654,
-  zoom: 8,
-};
+const paramsMap = initialState.params;
+const baseMap = new BaseLayerParams(paramsMap);
+paramsMap.baseURLs = baseMap.getBaseMap();
+paramsMap.baseURLTemplates = baseMap.getBaseMap(0);
 
-const baseMap = new BaseLayerParams(params);
-params.baseURLs = baseMap.getBaseMap();
-params.baseURLTemplates = baseMap.getBaseMap(0);
-
-const initialState = params;
 export default function MapReducer(state = initialState, action) {
   if (action.type === RENDER_TILE_LAYERS) {
     return action.payload;
   }
   if (action.type === GET_LOCATION) {
-    const payload = Object.assign(state, action.payload);
-    baseMap.updateParamsURI(payload);
-    return payload;
+    const params = action.payload;
+    baseMap.updateParamsURI(params);
+    return { ...state, params };
+  }
+  if (action.type === GET_PRESETS_DATA) {
+    const presets = action.payload;
+    return { ...state, presets };
   }
   return state;
 }

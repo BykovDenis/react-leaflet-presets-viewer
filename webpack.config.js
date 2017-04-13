@@ -14,7 +14,7 @@ var fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // для плагина формирования css в отдельные файлы
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-//const CopyWebpackPlugin = require('copy-webpack-plugin'); // копирование файлов
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // копирование файлов
 const HtmlWebpackPlugin = require('html-webpack-plugin');  // для плагина формирования html из шаблонизатора
 // dashbord
 var DashboardPlugin = require('webpack-dashboard/plugin');
@@ -117,13 +117,13 @@ module.exports = {
       allChunks: true
     }),
     // это функциональность webpack, предназначенная не только для быстрой подгрузки изменений на машине разработчика, но и для обновления сайтов в production
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
     // Плагин копирования файлов
-    /*
     new CopyWebpackPlugin([{
-      from: path.resolve(srcDir+'/html/', '.html'), to: ''
+      context: __dirname + '/src/js/api/',
+      from: '**/*',
+      to: 'themes/owm/assets/data/'
     }])
-    */
   ],
   module: {
     rules: [{

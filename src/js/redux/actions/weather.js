@@ -51,7 +51,7 @@ const mockAPIdata = {
   },
   naturalPhenomenon: naturalPhenomenon.en,
   windSpeed: windSpeed.en,
-  windDirection: windDirection.en
+  windDirection: windDirection.en,
 };
 
 let weatherMetadata = {
