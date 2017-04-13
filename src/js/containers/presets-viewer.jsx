@@ -7,7 +7,7 @@ import L from './../libs/L.Control.Search';
 import NavigationTools from '../components/navigation-tools/navigation-tools';
 import PopupCode from '../components/popup-code/popup-code';
 
-class App extends MapComponent {
+class PresetsViewer extends MapComponent {
   static get propTypes() {
     return {
       currentStore: PropTypes.object.isRequired,
@@ -90,4 +90,4 @@ function getPresetsParamsProps(dispatch) {
 export default connect(
   state => ({ currentStore: state }),
   getPresetsParamsProps
-)(App);
+)(PresetsViewer);
