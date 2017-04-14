@@ -2,16 +2,16 @@ import React, { PropTypes } from 'react';
 import { Map, MapComponent, TileLayer, ZoomControl } from 'react-leaflet';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import * as getPresetsData from '../redux/actions/presets';
 import L from './../libs/L.Control.Search';
 import NavigationTools from '../components/navigation-tools/navigation-tools';
 import PopupCode from '../components/popup-code/popup-code';
-import getPresetsParams from '../redux/actions/presets';
 
-class App extends MapComponent {
+class PresetsViewer extends MapComponent {
   static get propTypes() {
     return {
       currentStore: PropTypes.object.isRequired,
-      getPresetsParams: PropTypes.func.isRequired,
+      getPresets: PropTypes.object.isRequired,
     };
   }
   constructor(props) {
@@ -28,18 +28,19 @@ class App extends MapComponent {
     leafletMap.addControl(L.control.search());
   }
   componentWillMount() {
+    this.props.getPresets.getPresetsData();
     [this.lat, this.lon] = [
-      parseFloat(this.props.currentStore.MapReducer.lat, 10),
-      parseFloat(this.props.currentStore.MapReducer.lon, 10)
+      parseFloat(this.props.currentStore.MapReducer.params.lat, 10),
+      parseFloat(this.props.currentStore.MapReducer.params.lon, 10)
     ];
-    this.zoom = parseInt(this.props.currentStore.MapReducer.zoom, 10);
-    this.urls = this.props.currentStore.MapReducer.baseURLs;
+    this.zoom = parseInt(this.props.currentStore.MapReducer.params.zoom, 10);
+    this.urls = this.props.currentStore.MapReducer.params.baseURLs;
     this.attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
     this.urlLayers = this.urls.map(
       (elem, index) =>
         <TileLayer url={elem} attribution={this.attribution} key={index.toString()} />
     );
-    this.currentURL = this.props.currentStore.MapReducer.baseURLTemplates[1];
+    this.currentURL = this.props.currentStore.MapReducer.params.baseURLTemplates[1];
   }
   openPopup() {
     this.popupVisible = !this.state.popupVisible;
@@ -51,7 +52,7 @@ class App extends MapComponent {
   }
   getLatLon(e) {
     console.log(e.latlng.lat.toFixed(4), e.latlng.lng.toFixed(4));
-    this.props.getPresetsParams(
+    this.props.getPresets.getPresetsParams(
       [e.latlng.lat.toFixed(4), e.latlng.lng.toFixed(4)],
       e.target.getZoom()
     );
@@ -82,11 +83,11 @@ class App extends MapComponent {
 
 function getPresetsParamsProps(dispatch) {
   return {
-    getPresetsParams: bindActionCreators(getPresetsParams, dispatch)
+    getPresets: bindActionCreators(getPresetsData, dispatch)
   };
 }
 
 export default connect(
   state => ({ currentStore: state }),
   getPresetsParamsProps
-)(App);
+)(PresetsViewer);

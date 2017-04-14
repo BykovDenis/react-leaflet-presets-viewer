@@ -105,6 +105,24 @@ export default class ParseURL {
     }
   }
 
+  removeURIParamNotReloadPage(remElem) {
+    const url = this.getArrayURI();
+    url.uri = '';
+    Object.keys(url).forEach((elem) => {
+      if (elem === 'uri') {
+        return;
+      }
+      if (elem === remElem) {
+        delete url[remElem];
+      } else {
+        url.uri += `&${elem}=${url[elem]}`;
+        console.log(url.uri);
+      }
+    });
+    console.log(url.uri);
+    window.history.pushState({ foo: 'bar' }, 'Title', `?${url.uri.substr(1)}`);
+  }
+
   setDefaultURI(locationSearch) {
     this.location.search = locationSearch;
   }

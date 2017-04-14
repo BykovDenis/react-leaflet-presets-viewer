@@ -2,27 +2,59 @@
  * Created by bykovdenis on 19.03.17.
  */
 
-import { GET_LOCATION } from '../constants/page';
+import { GET_LOCATION, GET_PRESETS_DATA } from '../constants/page';
+import initialState from '../data/initialState';
 
 // Инициализируем объект начальным значением
-const params = {
-  lat: 36.0432,
-  lon: -4.7612,
-  zoom: 8
-};
-/*eslint-disable */
-const getPresetsParams = (latlon, zoom) => {
+const state = initialState;
+
+export const getPresetsParams = (latlon, zoom) => {
   if (!latlon) {
     return null;
   }
-  params.lat = latlon[0];
-  params.lon = latlon[1];
-  params.zoom = zoom;
+  state.params.lat = latlon[0];
+  state.params.lon = latlon[1];
+  state.params.zoom = zoom;
   return {
     type: GET_LOCATION,
-    payload: params
+    payload: state.params
   };
-}
+};
 
-/*eslint-disable */
-export default getPresetsParams;
+// Файл с данными для отрисовки пересетов
+const urlPresetsData = '/themes/owm/assets/data/basemap-sat.json';
+// таймаут обращения к серверу
+const timeout = 1800000;
+
+const getHTTP = (url, callback) => {
+  fetch(url, {
+    method: 'get',
+    mode: 'cors',
+  })
+    .then(response => response.json())
+    .then((presets) => {
+      callback(presets);
+    })
+    .catch((error) => {
+      console.log(`search error ${error}`);
+    });
+};
+
+const parsePresetsData = (data) => {
+  state.presets = data;
+};
+
+export const getPresetsData = () => (dispatch) => {
+  getHTTP(urlPresetsData, parsePresetsData);
+  dispatch({
+    type: GET_PRESETS_DATA,
+    payload: state.presets
+  });
+  setInterval(() => {
+    getHTTP(urlPresetsData, parsePresetsData);
+    dispatch({
+      type: GET_PRESETS_DATA,
+      payload: state.presets
+    });
+  }, timeout);
+};
