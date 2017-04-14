@@ -21,8 +21,10 @@ export const getPresetsParams = (latlon, zoom) => {
   };
 };
 
+// Файл с данными для отрисовки пересетов
 const urlPresetsData = '/themes/owm/assets/data/basemap-sat.json';
-const timeout = 5000;
+// таймаут обращения к серверу
+const timeout = 1800000;
 
 const getHTTP = (url, callback) => {
   fetch(url, {
