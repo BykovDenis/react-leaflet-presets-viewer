@@ -86,8 +86,8 @@ class BaseLayerParams {
     this.tileURL =
       httpProtocol +
       urlPresets[this.filterLayer].url +
-      urlPresets[this.filterLayer].urlParams +
-      '&appid=' + appid;
+      '?appid=' + appid +
+      urlPresets[this.filterLayer].urlParams;
 
     this.tileParam = {
       // Лучшие снимки
