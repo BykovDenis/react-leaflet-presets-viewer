@@ -26,35 +26,31 @@ const urlPresetsData = '/themes/owm/assets/data/basemap-sat.json';
 // таймаут обращения к серверу
 const timeout = 1800000;
 
-const getHTTP = (url, callback) => {
+const getHTTP = (url, callback, dispatch) => {
   fetch(url, {
     method: 'get',
     mode: 'cors',
   })
     .then(response => response.json())
     .then((presets) => {
-      callback(presets);
+      callback(presets, dispatch);
     })
     .catch((error) => {
       console.log(`search error ${error}`);
     });
 };
 
-const parsePresetsData = (data) => {
+const parsePresetsData = (data, dispatch) => {
   state.presets = data;
-};
-
-export const getPresetsData = () => (dispatch) => {
-  getHTTP(urlPresetsData, parsePresetsData);
   dispatch({
     type: GET_PRESETS_DATA,
     payload: state.presets
   });
+};
+
+export const getPresetsData = () => (dispatch) => {
+  getHTTP(urlPresetsData, parsePresetsData, dispatch);
   setInterval(() => {
-    getHTTP(urlPresetsData, parsePresetsData);
-    dispatch({
-      type: GET_PRESETS_DATA,
-      payload: state.presets
-    });
+    getHTTP(urlPresetsData, parsePresetsData, dispatch);
   }, timeout);
 };
